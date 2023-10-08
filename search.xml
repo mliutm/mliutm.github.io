@@ -19,6 +19,214 @@
 ]]></content>
   </entry>
   <entry>
+    <title>springboot快速入门一</title>
+    <url>/breeze/d872d24.html</url>
+    <content><![CDATA[<h2 id="一-简介"><a href="#一-简介" class="headerlink" title="一 简介"></a>一 简介</h2><ol>
+<li>springboot入门;(掌握)</li>
+<li>springboot入门分析;(掌握)</li>
+<li>springboot基本使用;(掌握)</li>
+</ol>
+<h2 id="二-SpringBoot入门"><a href="#二-SpringBoot入门" class="headerlink" title="二 SpringBoot入门"></a>二 SpringBoot入门</h2><h3 id="1-认识SpringBoot"><a href="#1-认识SpringBoot" class="headerlink" title="1.认识SpringBoot"></a>1.认识SpringBoot</h3><h4 id="1-1-什么是SpringBoot"><a href="#1-1-什么是SpringBoot" class="headerlink" title="1.1.什么是SpringBoot"></a>1.1.什么是SpringBoot</h4><blockquote>
+<p>Spring Boot是其设计目的是用来<strong>简化Spring应用（用到spring开发的项目）的初始搭建以及开发过程</strong>。该框架使用了特定的方式来进行配置，从而使开发人员不再需要定义样板化的配置。</p>
+</blockquote>
+<h4 id="1-2-SpringBoot的特点"><a href="#1-2-SpringBoot的特点" class="headerlink" title="1.2.SpringBoot的特点"></a>1.2.SpringBoot的特点</h4><p>​	SpringBoot是一个框架，可以非常快速的开发spring应用，SpringBoot具有如下特点：</p>
+<ul>
+<li>简化Maven，管理了大量的基础依赖</li>
+<li>基于注解配置(JavaConfig)&#x2F;无需xml，自动装配功能,简化大量配置</li>
+<li>内嵌tomcat,部署简单</li>
+<li>更加方便的和三方框架集成-mybatis等</li>
+<li>健康检查，支持外部化配置等</li>
+</ul>
+<p>idea中maven多模块：</p>
+<p> <strong>springboot-parent:项目 ,只是用来管理子模块，里面不会写代码</strong></p>
+<p>​        <strong>springboot-01-hello：模块，普通maven，java</strong></p>
+<p>​        springboot-02–config：模块，普通maven，java</p>
+<p>​       springboot-03–web：模块，普通maven，java</p>
+<p>​        springboot-04–mybatis：模块，普通maven，java</p>
+<p>​       springboot-05–tx：模块，普通maven，java</p>
+<p><img src="/breeze/d872d24.htm/1658369462302.png" alt="1658369462302"></p>
+<p><img src="/breeze/d872d24.htm/1658369477456.png" alt="1658369477456"></p>
+<h3 id="2-HelloWorld程序【重要】"><a href="#2-HelloWorld程序【重要】" class="headerlink" title="2.HelloWorld程序【重要】"></a>2.HelloWorld程序【重要】</h3><p>​	这里我们来做一个简单的web程序，大家可以回顾一下使用SpirngMVC如何实现一个web应用，然后对比SpringBoot实现web应用，看一下有什么区别</p>
+<h4 id="2-1-导入依赖"><a href="#2-1-导入依赖" class="headerlink" title="2.1.导入依赖"></a>2.1.导入依赖</h4><p>spring-boot-starter-parent是SpringBoot的父工程，通过继承的方式引入，spring-boot-starter-web是SpringBoot集成web的依赖，主要包括了SpingMVC,Tomcat,日志,自动配置等等相关依赖</p>
+<ul>
+<li>springboot-parent</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.0.5.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>springboot-01-hello</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/breeze/d872d24.htm/1658370003764.png" alt="1658370003764"></p>
+<h4 id="2-2-创建启动类"><a href="#2-2-创建启动类" class="headerlink" title="2.2.创建启动类"></a>2.2.创建启动类</h4><p>@SpringBootApplication注解是SpringBoot的主启动注解，贴在主启动类上， <strong>SpringApplication.run的作用是启动内置的Tomcat</strong>，运行SpringBoot的应用。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ApplicationConfig</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        SpringApplication.run(ApplicationConfig.class);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-3-配置文件application-properties"><a href="#2-3-配置文件application-properties" class="headerlink" title="2.3 配置文件application.properties"></a>2.3 配置文件application.properties</h4><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">server.port</span>=<span class="string">80</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="2-4-编写Controller"><a href="#2-4-编写Controller" class="headerlink" title="2.4.编写Controller"></a>2.4.编写Controller</h4><p>编写一个简单的controller进行测试，@RestController注解是@Controller和@ResponseBody的组合注解</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Example</span> &#123;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@RequestMapping(&quot;/hello&quot;)</span></span><br><span class="line">	String <span class="title function_">home</span><span class="params">()</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="string">&quot;Hello World!&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-5-启动测试"><a href="#2-5-启动测试" class="headerlink" title="2.5.启动测试"></a>2.5.启动测试</h4><p>执行main方法启动，浏览器访问：<a href="http://localhost:8080/hello">http://localhost:8080/hello</a></p>
+<h2 id="三-SpringBoot分析【重要】"><a href="#三-SpringBoot分析【重要】" class="headerlink" title="三 SpringBoot分析【重要】"></a>三 SpringBoot分析【重要】</h2><p>通过上面的HellWorld程序我们确实感知到SpringBoot的方便之处，如此快速的就能开发一个Web应用这是以前不可想象的，但是在这些快捷开发的背后不免有些问题，比如：为什么要继承spring-boot-starter-parent，它的作用是什么？spring-boot-starter-web又干了啥？下面我们就来了解一下这些让我们疑惑的地方。</p>
+<h3 id="1-spring-boot-starter-parent"><a href="#1-spring-boot-starter-parent" class="headerlink" title="1.spring-boot-starter-parent"></a>1.spring-boot-starter-parent</h3><p>在pom.xml中我们通过<parent> 继承了 <code>spring-boot-starter-parent</code>，我们说这个项目是SpringBoot的父工程</parent></p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.0.5.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>上面有介绍到，这个项目是SpringBoot的父工程，它的作用是帮我们管理了很多的基础jar包，有兴趣的小伙伴可以按住ctrl点进去看一下，在spring-boot-starter-parent中其实还继承了spring-boot-dependencies，在spring-boot-dependencies项目中通过<dependencyManagement>管理了非常多的依赖，同时通过&lt;<properties>维护了这些依赖的version ，总结一下就是SpringBoot的父工程帮我们管理了很多的基础依赖。</properties></dependencyManagement></p>
+<p>当我们继承了<code>spring-boot-starter-parent</code>就意味着我们成为了SpringBoot的一个子项目，拥有使用SpringBoot中管理的依赖的权利，但是还不能直接使用，需要在自己的项目中通过通过<dependencies> 去导入具体的依赖才行，当然version我们可以不用指定了，因为父项目已经维护了verion,除非你要自己指定自己的version。</dependencies></p>
+<p>这里普及一下pom.xml中的 <dependencyManagement>和 <dependencies> 的区别</dependencies></dependencyManagement></p>
+<ul>
+<li>dependencyManagement ：是用来管理或者说是声明依赖，其中的依赖并不能直接使用，需要在dependencies中显示的导入才可以用</li>
+<li>dependencies：是用来导入依赖，其中的依赖可以直接使用</li>
+</ul>
+<h3 id="2-spring-boot-starter-web"><a href="#2-spring-boot-starter-web" class="headerlink" title="2.spring-boot-starter-web"></a>2.spring-boot-starter-web</h3><p>spring-boot-starter-web这个项目是SpringBoot和SpringMvc整合的jar包，并且导入了日志，tomcat,等等相关的jar包</p>
+<p><img src="/breeze/d872d24.htm/1618364844612-1618372707261.png" alt="1618364844612"></p>
+<h3 id="3-SpringBootApplication"><a href="#3-SpringBootApplication" class="headerlink" title="3.@SpringBootApplication"></a>3.@SpringBootApplication</h3><p>这个注解是SpringBoot的一个组合注解，一般用来贴在主启动类用，它主要包括三个标签组成</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@SpringBootConfiguration</span></span><br><span class="line"><span class="meta">@EnableAutoConfiguration</span></span><br><span class="line"><span class="meta">@ComponentScan(excludeFilters = &#123;</span></span><br><span class="line"><span class="meta">		@Filter(type = FilterType.CUSTOM, classes = TypeExcludeFilter.class),</span></span><br><span class="line"><span class="meta">		@Filter(type = FilterType.CUSTOM, classes = AutoConfigurationExcludeFilter.class) &#125;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> SpringBootApplication &#123;</span><br></pre></td></tr></table></figure>
+
+<p>这里解释一下@SpringBootApplication上面的三个注解</p>
+<ul>
+<li><p>@SpringBootConfiguration: 这个注解是SpringBoot的配置注解其本质是一个@Configuration即Spring的配置注解，或者说如果一个类贴了@Configuration注解或@SpringBootConfiguration或@SpringBootApplication的类都可以被识别成Spring的配置类</p>
+</li>
+<li><p>@ComponentScan : 这个注解是Spring的IOC自动扫描注解，作用类似于<code>&lt;context:componentScan /&gt;</code>，该注解默认可以扫描当前主启动类所在包及其子包中的有注解了@Controller,@Service,@Repository,@Component,@Configuration 的类，自动注册到Spring容器中。</p>
+</li>
+<li><p>1.4.@EnableAutoConfiguration : 这个注解是开启SpringBoot自动配置的注解，它是SpringBoot可以快速开发，简化配置的主要原因。</p>
+</li>
+</ul>
+<h3 id="4-SpringApplication-run"><a href="#4-SpringApplication-run" class="headerlink" title="4.SpringApplication.run"></a>4.SpringApplication.run</h3><p>它的作用是启动SpringBoot项目，底层会创建IOC容器，进行Bean的初始化，也会走自动配置流程，最后会运行内置Tomcat启动项目</p>
+<h2 id="四-SpringBoot基本使用"><a href="#四-SpringBoot基本使用" class="headerlink" title="四 SpringBoot基本使用"></a>四 SpringBoot基本使用</h2><h3 id="1-SpringBoot基础功能"><a href="#1-SpringBoot基础功能" class="headerlink" title="1.SpringBoot基础功能"></a>1.SpringBoot基础功能</h3><h4 id="1-1-项目结构"><a href="#1-1-项目结构" class="headerlink" title="1.1.项目结构"></a>1.1.项目结构</h4><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">src</span><br><span class="line">	--main</span><br><span class="line">		--java</span><br><span class="line">		--resources</span><br><span class="line">			--static		//静态资源目录 img,js,css</span><br><span class="line">			--templates		//模板页面目录，如：jsp ,ftl</span><br><span class="line">			--application.properties/application.yml	//默认配置文件</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>java ：java目录是代码所在目录</p>
+</li>
+<li><p>resources&#x2F;static :静态资源目，springBoot默认的静态资源路径有五个，按照优先级分别是项目的根路径 &#x2F;，classpath:&#x2F;META-INF&#x2F;resources&#x2F;，classpath:&#x2F;resources&#x2F;，classpath:&#x2F;static&#x2F;，classpath:&#x2F;public&#x2F;</p>
+</li>
+<li><p>resources&#x2F;templates :模板文件所在目录，比如 .jsp,.ftl等等</p>
+</li>
+<li><p>resources&#x2F;application.properties,application.yml  : SpringBoot默认配置文件</p>
+</li>
+</ul>
+<h4 id="1-2-独立运行"><a href="#1-2-独立运行" class="headerlink" title="1.2.独立运行"></a>1.2.独立运行</h4><ul>
+<li>1.导入打包插件</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>2.执行打包命令，使用终端进入项目根目录执行 <code>mvn package</code> ，或者点击：</li>
+</ul>
+<p> <img src="/breeze/d872d24.htm/1568515028409.png" alt="1568515028409"></p>
+<ul>
+<li>3.打包命令会把jar打包到<code>target</code>目录，进入该目录，启动项目，运行</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">java -jar xxx.jar</span><br></pre></td></tr></table></figure>
+
+<p>可以通过 –添加指定配置，比如：<code>java -jar xxx.jar -–server.port=8888</code></p>
+<h4 id="1-3-热部署"><a href="#1-3-热部署" class="headerlink" title="1.3.热部署"></a>1.3.热部署</h4><p>SpringBoot提供了热部署解决方案spring-boot-devtools，它是通过检测classpath中的字节码变化重新编译项目的方式来实现热部署，个人建议程序员不要太过依赖热部署功能(你是否也踩过坑)</p>
+<ul>
+<li>1.导入依赖</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-devtools<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>2.编译代码</li>
+</ul>
+<blockquote>
+<p>ctrl + F9</p>
+</blockquote>
+<ul>
+<li>访问测试</li>
+</ul>
+<h4 id="1-4-yml基本语法"><a href="#1-4-yml基本语法" class="headerlink" title="1.4.yml基本语法"></a>1.4.yml基本语法</h4><p>在SpringBoot中可以使用application.properties 或者 application.yml(yaml) 或者bootstrap.yml(yaml) 作为默认的配置文件，bootstrap.yml的优先级最高，通常用来整合配置中心使用。 yml是一种全新的语言，他有自己的格式，比如在properties中配置的  server.port&#x3D;8888  在yml中配置体现为：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">8888</span></span><br></pre></td></tr></table></figure>
+
+<p>这里做一个简单的格式说明：</p>
+<ul>
+<li><p>k:(空格)v：表示一对键值对（空格必须有）；</p>
+</li>
+<li><p>以空格的缩进来控制层级关系；只要是左对齐的一列数据，都是同一个层级的</p>
+</li>
+<li><p>多个级之间用冒号 : 来分类，并且换行缩进 ， 如果是值就不用换行，值前面有个空格</p>
+</li>
+<li><p>属性和值也是大小写敏感；</p>
+</li>
+</ul>
+<p>举例：配置一个User对象在properties中的配置如：</p>
+<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="attr">user.username</span>=zs</span><br><span class="line"><span class="attr">user.password</span>=<span class="number">123</span></span><br></pre></td></tr></table></figure>
+
+<p>在yml中的配置如：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">user:</span></span><br><span class="line">	<span class="attr">username:</span> <span class="string">zs</span></span><br><span class="line">	<span class="attr">password:</span> <span class="number">123</span></span><br></pre></td></tr></table></figure>
+
+<p>或者使用行内写法：</p>
+ <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">user:</span> &#123;<span class="attr">username:</span> <span class="string">zs</span>,<span class="attr">password:</span> <span class="number">123</span>&#125;  <span class="comment">#不推荐</span></span><br></pre></td></tr></table></figure>
+
+<p>yml中值的写法：</p>
+<ul>
+<li>字面量：普通的值（数字，字符串，布尔） ， k: v：字面直接来写；字符串默认不用加上单引号或者双引号；</li>
+<li>“”：双引号；不会转义字符串里面的特殊字符；特殊字符会作为本身想表示的意思 name:   “zhangsan \n lisi”：输出；zhangsan 换行  lisi</li>
+<li>‘’：单引号；会转义特殊字符，特殊字符最终只是一个普通的字符串数据 name:   ‘zhangsan \n lisi’：输出；zhangsan \n  lisi</li>
+</ul>
+<p>k: v：在下一行来写对象的属性和值的关系；注意缩进 ， 对象还是k: v的方式</p>
+ <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">friends:</span></span><br><span class="line">	<span class="attr">lastName:</span> <span class="string">zhangsan</span></span><br><span class="line">	<span class="attr">age:</span> <span class="number">20</span></span><br></pre></td></tr></table></figure>
+
+<p>数组（List、Set）,用- 值表示数组中的一个元素</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">pets:</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">cat</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">dog</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">pig</span></span><br></pre></td></tr></table></figure>
+
+<p>或者写成：pets: [cat,dog,pig]</p>
+<h4 id="1-5-SpringBoot读取配置【重要】"><a href="#1-5-SpringBoot读取配置【重要】" class="headerlink" title="1.5.SpringBoot读取配置【重要】"></a>1.5.SpringBoot读取配置【重要】</h4><ul>
+<li>方式一：使用@Value 配置文件</li>
+</ul>
+<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">user:</span></span><br><span class="line"><span class="symbol">  username:</span> ls</span><br><span class="line"><span class="symbol">  password:</span> <span class="number">456</span></span><br><span class="line"><span class="symbol">  age:</span> <span class="number">99</span></span><br></pre></td></tr></table></figure>
+
+<p>使用@Value标签读取配置</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">User</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//@Value :从配置文件中取值   SPEL</span></span><br><span class="line">    <span class="meta">@Value(<span class="string">&quot;<span class="subst">$&#123;user.username&#125;</span>&quot;</span>)</span></span><br><span class="line">    <span class="keyword">private</span> String username = <span class="string">&quot;zs&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Value(<span class="string">&quot;<span class="subst">$&#123;user.password&#125;</span>&quot;</span>)</span></span><br><span class="line">    <span class="keyword">private</span> String password = <span class="string">&quot;123&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Value(<span class="string">&quot;<span class="subst">$&#123;user.age&#125;</span>&quot;</span>)</span></span><br><span class="line">    <span class="keyword">private</span> int age = <span class="number">18</span>;</span><br><span class="line">    . . . . . . </span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>方式二：使用@ConfigurationProperties， 配置文件</li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">employee:</span></span><br><span class="line">  <span class="attr">username:</span> <span class="string">ls</span></span><br><span class="line">  <span class="attr">password:</span> <span class="number">456</span></span><br><span class="line">  <span class="attr">age:</span> <span class="number">99</span></span><br></pre></td></tr></table></figure>
+
+<p>绑定配置的对象</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@ConfigurationProperties(prefix = &quot;employee&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Employee</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">String</span> <span class="variable">username</span> <span class="operator">=</span> <span class="string">&quot;zs&quot;</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">String</span> <span class="variable">password</span> <span class="operator">=</span> <span class="string">&quot;123&quot;</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> <span class="variable">age</span> <span class="operator">=</span> <span class="number">18</span>;</span><br></pre></td></tr></table></figure>
+
+<p>@ConfigurationProperties : 自动的根据前缀从配置中过滤出配置项目，然后根据当前对象的列名进行匹配，自动赋值。</p>
+<h4 id="1-6-多环境配置切换【重要】"><a href="#1-6-多环境配置切换【重要】" class="headerlink" title="1.6.多环境配置切换【重要】"></a>1.6.多环境配置切换【重要】</h4><p>一套代码需要部署到不同环境，一套代码不同配置就OK</p>
+<p><img src="/breeze/d872d24.htm/1658389887829.png" alt="1658389887829"></p>
+<ul>
+<li>方式一：使用单个配置文件实现多环境配置</li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span></span><br><span class="line">    <span class="attr">active:</span> <span class="string">dev</span>	<span class="comment">#激活(选择)环境test</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span> <span class="string">dev</span>		<span class="comment">#指定环境名字dev</span></span><br><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">9999</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span> <span class="string">test</span>	<span class="comment">#指定环境名字test</span></span><br><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">8888</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>方式二：使用多配置文件，通过配置文件的名字来识别环境</li>
+</ul>
+<p>application-dev.yml</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">9999</span></span><br></pre></td></tr></table></figure>
+
+<p>application-test.yml</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">8888</span></span><br></pre></td></tr></table></figure>
+
+<p>application.yml</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span></span><br><span class="line">    <span class="attr">active:</span> <span class="string">test</span> </span><br><span class="line">    <span class="comment">#根据文件名字配置 application-dev.properties</span></span><br></pre></td></tr></table></figure>
+
+<p>通过修改运行的参数，指定运行环境：</p>
+<p>-Dspring.profiles.active&#x3D;dev</p>
+<p>部署时采用命令指定运行环境：</p>
+<p>java -jar xx-1.0-SNAPSHOT.jar –spring.profiles.active&#x3D;dev</p>
+<h4 id="1-7-SpringBoot读取-properties和xml"><a href="#1-7-SpringBoot读取-properties和xml" class="headerlink" title="1.7.SpringBoot读取 properties和xml"></a>1.7.SpringBoot读取 properties和xml</h4><p>SpringBoot默认加载application.yml ,application.properties作为配置文件，也可以使用下面的注解加载额外的配置文件</p>
+<ul>
+<li>@PropertySource(“classpath:aa.properties”) ：加载一个properties配置文件</li>
+<li><strong>@ImportResource(“classpath:application-context.xml”):加载一个xml配置文件</strong></li>
+</ul>
+]]></content>
+      <categories>
+        <category>java后端</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>springboot</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>java8新特性</title>
     <url>/breeze/f41870e2.html</url>
     <content><![CDATA[<h2 id="Java8新特性"><a href="#Java8新特性" class="headerlink" title="Java8新特性"></a>Java8新特性</h2><h3 id="知识大纲"><a href="#知识大纲" class="headerlink" title="知识大纲"></a>知识大纲</h3><ul>
@@ -322,7 +530,7 @@
 <p>Optional 是个容器：它可以保存类型T的值，或者仅仅保存null。Optional提供很多有用的方法，这样我们就不用显式进行空值检测。</p>
 <p>Optional 类的引入很好的解决空指针异常</p>
 <p>善用Optional可以使我们代码中很多繁琐、丑陋的设计变得十分优雅。</p>
-<h4 id="8-1-声明"><a href="#8-1-声明" class="headerlink" title="8.1 声明"></a>8.1 声明</h4><p>以下是一个 java.util.Optional<T> 类的声明：public final class Optional<T> extends Object</p>
+<h4 id="8-1-声明"><a href="#8-1-声明" class="headerlink" title="8.1 声明"></a>8.1 声明</h4><p>以下是一个 java.util.Optional<T> 类的声明：public final class Optional<T> extends Object</T></T></p>
 <p>Optional容器类常用方法：</p>
 <p><strong>Optional.of(T t):创建要给Optional实例</strong></p>
 <p><strong>Optional.empty():创建一个空的Optional实例</strong></p>
@@ -381,239 +589,13 @@
 <p>多线程 线程的创建方式  生命周期  锁机制  synconized与lock区别 threadlocal原理</p>
 <p>线程池  线程池原理 常见4种线程池</p>
 <p>线程池中最大线程数的设置</p>
-<h1 id=""><a href="#" class="headerlink" title=""></a></h1>]]></content>
+<h1 id><a href="#" class="headerlink" title></a></h1>]]></content>
       <categories>
         <category>java后端</category>
       </categories>
       <tags>
         <tag>java</tag>
         <tag>java8新特性</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>springboot快速入门一</title>
-    <url>/breeze/d872d24.html</url>
-    <content><![CDATA[<h2 id="一-简介"><a href="#一-简介" class="headerlink" title="一 简介"></a>一 简介</h2><ol>
-<li>springboot入门;(掌握)</li>
-<li>springboot入门分析;(掌握)</li>
-<li>springboot基本使用;(掌握)</li>
-</ol>
-<h2 id="二-SpringBoot入门"><a href="#二-SpringBoot入门" class="headerlink" title="二 SpringBoot入门"></a>二 SpringBoot入门</h2><h3 id="1-认识SpringBoot"><a href="#1-认识SpringBoot" class="headerlink" title="1.认识SpringBoot"></a>1.认识SpringBoot</h3><h4 id="1-1-什么是SpringBoot"><a href="#1-1-什么是SpringBoot" class="headerlink" title="1.1.什么是SpringBoot"></a>1.1.什么是SpringBoot</h4><blockquote>
-<p>Spring Boot是其设计目的是用来<strong>简化Spring应用（用到spring开发的项目）的初始搭建以及开发过程</strong>。该框架使用了特定的方式来进行配置，从而使开发人员不再需要定义样板化的配置。</p>
-</blockquote>
-<h4 id="1-2-SpringBoot的特点"><a href="#1-2-SpringBoot的特点" class="headerlink" title="1.2.SpringBoot的特点"></a>1.2.SpringBoot的特点</h4><p>​	SpringBoot是一个框架，可以非常快速的开发spring应用，SpringBoot具有如下特点：</p>
-<ul>
-<li>简化Maven，管理了大量的基础依赖</li>
-<li>基于注解配置(JavaConfig)&#x2F;无需xml，自动装配功能,简化大量配置</li>
-<li>内嵌tomcat,部署简单</li>
-<li>更加方便的和三方框架集成-mybatis等</li>
-<li>健康检查，支持外部化配置等</li>
-</ul>
-<p>idea中maven多模块：</p>
-<p> <strong>springboot-parent:项目 ,只是用来管理子模块，里面不会写代码</strong></p>
-<p>​        <strong>springboot-01-hello：模块，普通maven，java</strong></p>
-<p>​        springboot-02–config：模块，普通maven，java</p>
-<p>​       springboot-03–web：模块，普通maven，java</p>
-<p>​        springboot-04–mybatis：模块，普通maven，java</p>
-<p>​       springboot-05–tx：模块，普通maven，java</p>
-<p><img src="/./springboot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A81/1658369462302.png" alt="1658369462302"></p>
-<p><img src="/./springboot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A81/1658369477456.png" alt="1658369477456"></p>
-<h3 id="2-HelloWorld程序【重要】"><a href="#2-HelloWorld程序【重要】" class="headerlink" title="2.HelloWorld程序【重要】"></a>2.HelloWorld程序【重要】</h3><p>​	这里我们来做一个简单的web程序，大家可以回顾一下使用SpirngMVC如何实现一个web应用，然后对比SpringBoot实现web应用，看一下有什么区别</p>
-<h4 id="2-1-导入依赖"><a href="#2-1-导入依赖" class="headerlink" title="2.1.导入依赖"></a>2.1.导入依赖</h4><p>spring-boot-starter-parent是SpringBoot的父工程，通过继承的方式引入，spring-boot-starter-web是SpringBoot集成web的依赖，主要包括了SpingMVC,Tomcat,日志,自动配置等等相关依赖</p>
-<ul>
-<li>springboot-parent</li>
-</ul>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.0.5.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>springboot-01-hello</li>
-</ul>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="/./springboot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A81/1658370003764.png" alt="1658370003764"></p>
-<h4 id="2-2-创建启动类"><a href="#2-2-创建启动类" class="headerlink" title="2.2.创建启动类"></a>2.2.创建启动类</h4><p>@SpringBootApplication注解是SpringBoot的主启动注解，贴在主启动类上， <strong>SpringApplication.run的作用是启动内置的Tomcat</strong>，运行SpringBoot的应用。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ApplicationConfig</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        SpringApplication.run(ApplicationConfig.class);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-3-配置文件application-properties"><a href="#2-3-配置文件application-properties" class="headerlink" title="2.3 配置文件application.properties"></a>2.3 配置文件application.properties</h4><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">server.port</span>=<span class="string">80</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="2-4-编写Controller"><a href="#2-4-编写Controller" class="headerlink" title="2.4.编写Controller"></a>2.4.编写Controller</h4><p>编写一个简单的controller进行测试，@RestController注解是@Controller和@ResponseBody的组合注解</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Example</span> &#123;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@RequestMapping(&quot;/hello&quot;)</span></span><br><span class="line">	String <span class="title function_">home</span><span class="params">()</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="string">&quot;Hello World!&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-5-启动测试"><a href="#2-5-启动测试" class="headerlink" title="2.5.启动测试"></a>2.5.启动测试</h4><p>执行main方法启动，浏览器访问：<a href="http://localhost:8080/hello">http://localhost:8080/hello</a></p>
-<h2 id="三-SpringBoot分析【重要】"><a href="#三-SpringBoot分析【重要】" class="headerlink" title="三 SpringBoot分析【重要】"></a>三 SpringBoot分析【重要】</h2><p>通过上面的HellWorld程序我们确实感知到SpringBoot的方便之处，如此快速的就能开发一个Web应用这是以前不可想象的，但是在这些快捷开发的背后不免有些问题，比如：为什么要继承spring-boot-starter-parent，它的作用是什么？spring-boot-starter-web又干了啥？下面我们就来了解一下这些让我们疑惑的地方。</p>
-<h3 id="1-spring-boot-starter-parent"><a href="#1-spring-boot-starter-parent" class="headerlink" title="1.spring-boot-starter-parent"></a>1.spring-boot-starter-parent</h3><p>在pom.xml中我们通过<parent> 继承了 <code>spring-boot-starter-parent</code>，我们说这个项目是SpringBoot的父工程</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.0.5.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>上面有介绍到，这个项目是SpringBoot的父工程，它的作用是帮我们管理了很多的基础jar包，有兴趣的小伙伴可以按住ctrl点进去看一下，在spring-boot-starter-parent中其实还继承了spring-boot-dependencies，在spring-boot-dependencies项目中通过<dependencyManagement>管理了非常多的依赖，同时通过&lt;<properties>维护了这些依赖的version ，总结一下就是SpringBoot的父工程帮我们管理了很多的基础依赖。</p>
-<p>当我们继承了<code>spring-boot-starter-parent</code>就意味着我们成为了SpringBoot的一个子项目，拥有使用SpringBoot中管理的依赖的权利，但是还不能直接使用，需要在自己的项目中通过通过<dependencies> 去导入具体的依赖才行，当然version我们可以不用指定了，因为父项目已经维护了verion,除非你要自己指定自己的version。</p>
-<p>这里普及一下pom.xml中的 <dependencyManagement>和 <dependencies> 的区别</p>
-<ul>
-<li>dependencyManagement ：是用来管理或者说是声明依赖，其中的依赖并不能直接使用，需要在dependencies中显示的导入才可以用</li>
-<li>dependencies：是用来导入依赖，其中的依赖可以直接使用</li>
-</ul>
-<h3 id="2-spring-boot-starter-web"><a href="#2-spring-boot-starter-web" class="headerlink" title="2.spring-boot-starter-web"></a>2.spring-boot-starter-web</h3><p>spring-boot-starter-web这个项目是SpringBoot和SpringMvc整合的jar包，并且导入了日志，tomcat,等等相关的jar包</p>
-<p><img src="/./springboot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A81/1618364844612-1618372707261.png" alt="1618364844612"></p>
-<h3 id="3-SpringBootApplication"><a href="#3-SpringBootApplication" class="headerlink" title="3.@SpringBootApplication"></a>3.@SpringBootApplication</h3><p>这个注解是SpringBoot的一个组合注解，一般用来贴在主启动类用，它主要包括三个标签组成</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@SpringBootConfiguration</span></span><br><span class="line"><span class="meta">@EnableAutoConfiguration</span></span><br><span class="line"><span class="meta">@ComponentScan(excludeFilters = &#123;</span></span><br><span class="line"><span class="meta">		@Filter(type = FilterType.CUSTOM, classes = TypeExcludeFilter.class),</span></span><br><span class="line"><span class="meta">		@Filter(type = FilterType.CUSTOM, classes = AutoConfigurationExcludeFilter.class) &#125;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> SpringBootApplication &#123;</span><br></pre></td></tr></table></figure>
-
-<p>这里解释一下@SpringBootApplication上面的三个注解</p>
-<ul>
-<li><p>@SpringBootConfiguration: 这个注解是SpringBoot的配置注解其本质是一个@Configuration即Spring的配置注解，或者说如果一个类贴了@Configuration注解或@SpringBootConfiguration或@SpringBootApplication的类都可以被识别成Spring的配置类</p>
-</li>
-<li><p>@ComponentScan : 这个注解是Spring的IOC自动扫描注解，作用类似于<code>&lt;context:componentScan /&gt;</code>，该注解默认可以扫描当前主启动类所在包及其子包中的有注解了@Controller,@Service,@Repository,@Component,@Configuration 的类，自动注册到Spring容器中。</p>
-</li>
-<li><p>1.4.@EnableAutoConfiguration : 这个注解是开启SpringBoot自动配置的注解，它是SpringBoot可以快速开发，简化配置的主要原因。</p>
-</li>
-</ul>
-<h3 id="4-SpringApplication-run"><a href="#4-SpringApplication-run" class="headerlink" title="4.SpringApplication.run"></a>4.SpringApplication.run</h3><p>它的作用是启动SpringBoot项目，底层会创建IOC容器，进行Bean的初始化，也会走自动配置流程，最后会运行内置Tomcat启动项目</p>
-<h2 id="四-SpringBoot基本使用"><a href="#四-SpringBoot基本使用" class="headerlink" title="四 SpringBoot基本使用"></a>四 SpringBoot基本使用</h2><h3 id="1-SpringBoot基础功能"><a href="#1-SpringBoot基础功能" class="headerlink" title="1.SpringBoot基础功能"></a>1.SpringBoot基础功能</h3><h4 id="1-1-项目结构"><a href="#1-1-项目结构" class="headerlink" title="1.1.项目结构"></a>1.1.项目结构</h4><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">src</span><br><span class="line">	--main</span><br><span class="line">		--java</span><br><span class="line">		--resources</span><br><span class="line">			--static		//静态资源目录 img,js,css</span><br><span class="line">			--templates		//模板页面目录，如：jsp ,ftl</span><br><span class="line">			--application.properties/application.yml	//默认配置文件</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>java ：java目录是代码所在目录</p>
-</li>
-<li><p>resources&#x2F;static :静态资源目，springBoot默认的静态资源路径有五个，按照优先级分别是项目的根路径 &#x2F;，classpath:&#x2F;META-INF&#x2F;resources&#x2F;，classpath:&#x2F;resources&#x2F;，classpath:&#x2F;static&#x2F;，classpath:&#x2F;public&#x2F;</p>
-</li>
-<li><p>resources&#x2F;templates :模板文件所在目录，比如 .jsp,.ftl等等</p>
-</li>
-<li><p>resources&#x2F;application.properties,application.yml  : SpringBoot默认配置文件</p>
-</li>
-</ul>
-<h4 id="1-2-独立运行"><a href="#1-2-独立运行" class="headerlink" title="1.2.独立运行"></a>1.2.独立运行</h4><ul>
-<li>1.导入打包插件</li>
-</ul>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>2.执行打包命令，使用终端进入项目根目录执行 <code>mvn package</code> ，或者点击：</li>
-</ul>
-<p> <img src="/./springboot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A81/1568515028409.png" alt="1568515028409"></p>
-<ul>
-<li>3.打包命令会把jar打包到<code>target</code>目录，进入该目录，启动项目，运行</li>
-</ul>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">java -jar xxx.jar</span><br></pre></td></tr></table></figure>
-
-<p>可以通过 –添加指定配置，比如：<code>java -jar xxx.jar -–server.port=8888</code></p>
-<h4 id="1-3-热部署"><a href="#1-3-热部署" class="headerlink" title="1.3.热部署"></a>1.3.热部署</h4><p>SpringBoot提供了热部署解决方案spring-boot-devtools，它是通过检测classpath中的字节码变化重新编译项目的方式来实现热部署，个人建议程序员不要太过依赖热部署功能(你是否也踩过坑)</p>
-<ul>
-<li>1.导入依赖</li>
-</ul>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-devtools<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>2.编译代码</li>
-</ul>
-<blockquote>
-<p>ctrl + F9</p>
-</blockquote>
-<ul>
-<li>访问测试</li>
-</ul>
-<h4 id="1-4-yml基本语法"><a href="#1-4-yml基本语法" class="headerlink" title="1.4.yml基本语法"></a>1.4.yml基本语法</h4><p>在SpringBoot中可以使用application.properties 或者 application.yml(yaml) 或者bootstrap.yml(yaml) 作为默认的配置文件，bootstrap.yml的优先级最高，通常用来整合配置中心使用。 yml是一种全新的语言，他有自己的格式，比如在properties中配置的  server.port&#x3D;8888  在yml中配置体现为：</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">8888</span></span><br></pre></td></tr></table></figure>
-
-<p>这里做一个简单的格式说明：</p>
-<ul>
-<li><p>k:(空格)v：表示一对键值对（空格必须有）；</p>
-</li>
-<li><p>以空格的缩进来控制层级关系；只要是左对齐的一列数据，都是同一个层级的</p>
-</li>
-<li><p>多个级之间用冒号 : 来分类，并且换行缩进 ， 如果是值就不用换行，值前面有个空格</p>
-</li>
-<li><p>属性和值也是大小写敏感；</p>
-</li>
-</ul>
-<p>举例：配置一个User对象在properties中的配置如：</p>
-<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="attr">user.username</span>=zs</span><br><span class="line"><span class="attr">user.password</span>=<span class="number">123</span></span><br></pre></td></tr></table></figure>
-
-<p>在yml中的配置如：</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">user:</span></span><br><span class="line">	<span class="attr">username:</span> <span class="string">zs</span></span><br><span class="line">	<span class="attr">password:</span> <span class="number">123</span></span><br></pre></td></tr></table></figure>
-
-<p>或者使用行内写法：</p>
- <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">user:</span> &#123;<span class="attr">username:</span> <span class="string">zs</span>,<span class="attr">password:</span> <span class="number">123</span>&#125;  <span class="comment">#不推荐</span></span><br></pre></td></tr></table></figure>
-
-<p>yml中值的写法：</p>
-<ul>
-<li>字面量：普通的值（数字，字符串，布尔） ， k: v：字面直接来写；字符串默认不用加上单引号或者双引号；</li>
-<li>“”：双引号；不会转义字符串里面的特殊字符；特殊字符会作为本身想表示的意思 name:   “zhangsan \n lisi”：输出；zhangsan 换行  lisi</li>
-<li>‘’：单引号；会转义特殊字符，特殊字符最终只是一个普通的字符串数据 name:   ‘zhangsan \n lisi’：输出；zhangsan \n  lisi</li>
-</ul>
-<p>k: v：在下一行来写对象的属性和值的关系；注意缩进 ， 对象还是k: v的方式</p>
- <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">friends:</span></span><br><span class="line">	<span class="attr">lastName:</span> <span class="string">zhangsan</span></span><br><span class="line">	<span class="attr">age:</span> <span class="number">20</span></span><br></pre></td></tr></table></figure>
-
-<p>数组（List、Set）,用- 值表示数组中的一个元素</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">pets:</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">cat</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">dog</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">pig</span></span><br></pre></td></tr></table></figure>
-
-<p>或者写成：pets: [cat,dog,pig]</p>
-<h4 id="1-5-SpringBoot读取配置【重要】"><a href="#1-5-SpringBoot读取配置【重要】" class="headerlink" title="1.5.SpringBoot读取配置【重要】"></a>1.5.SpringBoot读取配置【重要】</h4><ul>
-<li>方式一：使用@Value 配置文件</li>
-</ul>
-<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">user:</span></span><br><span class="line"><span class="symbol">  username:</span> ls</span><br><span class="line"><span class="symbol">  password:</span> <span class="number">456</span></span><br><span class="line"><span class="symbol">  age:</span> <span class="number">99</span></span><br></pre></td></tr></table></figure>
-
-<p>使用@Value标签读取配置</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">User</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//@Value :从配置文件中取值   SPEL</span></span><br><span class="line">    <span class="meta">@Value(<span class="string">&quot;<span class="subst">$&#123;user.username&#125;</span>&quot;</span>)</span></span><br><span class="line">    <span class="keyword">private</span> String username = <span class="string">&quot;zs&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Value(<span class="string">&quot;<span class="subst">$&#123;user.password&#125;</span>&quot;</span>)</span></span><br><span class="line">    <span class="keyword">private</span> String password = <span class="string">&quot;123&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Value(<span class="string">&quot;<span class="subst">$&#123;user.age&#125;</span>&quot;</span>)</span></span><br><span class="line">    <span class="keyword">private</span> int age = <span class="number">18</span>;</span><br><span class="line">    . . . . . . </span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>方式二：使用@ConfigurationProperties， 配置文件</li>
-</ul>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">employee:</span></span><br><span class="line">  <span class="attr">username:</span> <span class="string">ls</span></span><br><span class="line">  <span class="attr">password:</span> <span class="number">456</span></span><br><span class="line">  <span class="attr">age:</span> <span class="number">99</span></span><br></pre></td></tr></table></figure>
-
-<p>绑定配置的对象</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@ConfigurationProperties(prefix = &quot;employee&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Employee</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">String</span> <span class="variable">username</span> <span class="operator">=</span> <span class="string">&quot;zs&quot;</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">String</span> <span class="variable">password</span> <span class="operator">=</span> <span class="string">&quot;123&quot;</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> <span class="variable">age</span> <span class="operator">=</span> <span class="number">18</span>;</span><br></pre></td></tr></table></figure>
-
-<p>@ConfigurationProperties : 自动的根据前缀从配置中过滤出配置项目，然后根据当前对象的列名进行匹配，自动赋值。</p>
-<h4 id="1-6-多环境配置切换【重要】"><a href="#1-6-多环境配置切换【重要】" class="headerlink" title="1.6.多环境配置切换【重要】"></a>1.6.多环境配置切换【重要】</h4><p>一套代码需要部署到不同环境，一套代码不同配置就OK</p>
-<p><img src="/./springboot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A81/1658389887829.png" alt="1658389887829"></p>
-<ul>
-<li>方式一：使用单个配置文件实现多环境配置</li>
-</ul>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span></span><br><span class="line">    <span class="attr">active:</span> <span class="string">dev</span>	<span class="comment">#激活(选择)环境test</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span> <span class="string">dev</span>		<span class="comment">#指定环境名字dev</span></span><br><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">9999</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span> <span class="string">test</span>	<span class="comment">#指定环境名字test</span></span><br><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">8888</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>方式二：使用多配置文件，通过配置文件的名字来识别环境</li>
-</ul>
-<p>application-dev.yml</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">9999</span></span><br></pre></td></tr></table></figure>
-
-<p>application-test.yml</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">8888</span></span><br></pre></td></tr></table></figure>
-
-<p>application.yml</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span></span><br><span class="line">    <span class="attr">active:</span> <span class="string">test</span> </span><br><span class="line">    <span class="comment">#根据文件名字配置 application-dev.properties</span></span><br></pre></td></tr></table></figure>
-
-<p>通过修改运行的参数，指定运行环境：</p>
-<p>-Dspring.profiles.active&#x3D;dev</p>
-<p>部署时采用命令指定运行环境：</p>
-<p>java -jar xx-1.0-SNAPSHOT.jar –spring.profiles.active&#x3D;dev</p>
-<h4 id="1-7-SpringBoot读取-properties和xml"><a href="#1-7-SpringBoot读取-properties和xml" class="headerlink" title="1.7.SpringBoot读取 properties和xml"></a>1.7.SpringBoot读取 properties和xml</h4><p>SpringBoot默认加载application.yml ,application.properties作为配置文件，也可以使用下面的注解加载额外的配置文件</p>
-<ul>
-<li>@PropertySource(“classpath:aa.properties”) ：加载一个properties配置文件</li>
-<li><strong>@ImportResource(“classpath:application-context.xml”):加载一个xml配置文件</strong></li>
-</ul>
-]]></content>
-      <categories>
-        <category>java后端</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
-        <tag>springboot</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>测试博客发布</title>
-    <url>/breeze/a11f55b1.html</url>
-    <content><![CDATA[<p><strong>下面看进行一个简单的java程序测试，它将输出字符串 Hello World！</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MyFirstBolgTest</span>&#123;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    *	第一个java测试博客程序</span></span><br><span class="line"><span class="comment">    *   它将打印字符串 Hello World!</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Hello World!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>测试字数统计和修改时间</strong></p>
-<p><strong>测试图片显示</strong></p>
-<p><img src="/./%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B8%83/bohdan-orlov-wTdzR9KMzQQ-unsplash.jpg"></p>
-<hr>
-<p><img src="/./%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B8%83/johan-lindberg-6bJ5Oo-2QoI-unsplash.jpg"></p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -635,11 +617,11 @@
 <li><p>写代码测试编译是有对应的功能</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ronghuanet.domain;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> lombok.*;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*@Getter</span></span><br><span class="line"><span class="comment">@Setter</span></span><br><span class="line"><span class="comment">@ToString</span></span><br><span class="line"><span class="comment">@AllArgsConstructor</span></span><br><span class="line"><span class="comment">@NoArgsConstructor</span></span><br><span class="line"><span class="comment">@EqualsAndHashCode</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">@Data</span> <span class="comment">//就包含@Getter @Setter @ToString @Equals @HashCode</span></span><br><span class="line"><span class="comment">// 在编译的时候是会给你加上对应的功能，但是在idea里面写代码的时候识别不了,</span></span><br><span class="line"><span class="comment">// 需要安装lombok idea插件，让在编码是也能嗲用对于的功能</span></span><br><span class="line"><span class="meta">@AllArgsConstructor</span></span><br><span class="line"><span class="meta">@NoArgsConstructor</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">User</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> Long id;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> Integer age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p><img src="/./springboot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%BA%8C/1658455182137.png" alt="1658455182137"></p>
+<p><img src="/breeze/3607038d.htm/1658455182137.png" alt="1658455182137"></p>
 <p>编码是还是调用不了，需要安装idea lombok插件</p>
 </li>
 <li><p>配置idea lombok插件</p>
-<p><img src="/./springboot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%BA%8C/1658455236057.png" alt="1658455236057"></p>
+<p><img src="/breeze/3607038d.htm/1658455236057.png" alt="1658455236057"></p>
 </li>
 <li><p>调用代码测试</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//通过SpringRunner来运行</span></span><br><span class="line"><span class="meta">@RunWith(SpringRunner.class)</span></span><br><span class="line"><span class="comment">//springboot测试用一个注解就OK,里面要传入入口类</span></span><br><span class="line"><span class="meta">@SpringBootTest(classes = TestAppStart.class)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SpringBootTestTest</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">test</span><span class="params">()</span> <span class="keyword">throws</span> Exception</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">User</span> <span class="variable">user</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">User</span>();</span><br><span class="line">        user.setId(<span class="number">1L</span>);</span><br><span class="line"></span><br><span class="line">        System.out.println(user);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
@@ -652,7 +634,7 @@
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ronghuanet.domain;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> lombok.*;</span><br><span class="line"><span class="keyword">import</span> lombok.extern.slf4j.Slf4j;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.Logger;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.LoggerFactory;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*@Getter</span></span><br><span class="line"><span class="comment">@Setter</span></span><br><span class="line"><span class="comment">@ToString</span></span><br><span class="line"><span class="comment">@AllArgsConstructor</span></span><br><span class="line"><span class="comment">@NoArgsConstructor</span></span><br><span class="line"><span class="comment">@EqualsAndHashCode</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">@Data</span> <span class="comment">//就包含@Getter @Setter @ToString @Equals @HashCode</span></span><br><span class="line"><span class="comment">// 在编译的时候是会给你加上对应的功能，但是在idea里面写代码的时候识别不了,</span></span><br><span class="line"><span class="comment">// 需要安装lombok idea插件，让在编码是也能嗲用对于的功能</span></span><br><span class="line"><span class="meta">@AllArgsConstructor</span></span><br><span class="line"><span class="meta">@NoArgsConstructor</span></span><br><span class="line"><span class="meta">@Slf4j</span> <span class="comment">//类似生成private Logger log = LoggerFactory.getLogger(User.class);</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">User</span> &#123;</span><br><span class="line">    <span class="comment">//新建一个日志对象</span></span><br><span class="line"><span class="comment">//    private Logger log = LoggerFactory.getLogger(User.class);</span></span><br><span class="line">    <span class="keyword">private</span> Long id;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> Integer age;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">testLog</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="comment">//级别：debug&lt;info&lt;warn&lt;error  可以在配置文件中配置显示级别，如果配置了，只能显示它或级别比他更高</span></span><br><span class="line">        log.debug(<span class="string">&quot;debug...&quot;</span>);</span><br><span class="line">        log.info(<span class="string">&quot;info...&quot;</span>);</span><br><span class="line">        log.warn(<span class="string">&quot;warn...&quot;</span>);</span><br><span class="line">        log.error(<span class="string">&quot;error...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
 </ol>
 <h2 id="三-springboot-web开发-springmvc"><a href="#三-springboot-web开发-springmvc" class="headerlink" title="三 springboot web开发-springmvc"></a>三 springboot web开发-springmvc</h2><p>​	所谓的springbootweb开发，其实就是以springboot方式（导入对应starter）来使用springmvc，这样就不需要像原来一样做大量的配置了。并且原来springmvc功能在springboot也有.</p>
-<p><img src="/./springboot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%BA%8C/1658458434835.png" alt="1658458434835"></p>
+<p><img src="/breeze/3607038d.htm/1658458434835.png" alt="1658458434835"></p>
 <h3 id="1-响应界面-thymeleaf"><a href="#1-响应界面-thymeleaf" class="headerlink" title="1 响应界面-thymeleaf"></a>1 响应界面-thymeleaf</h3><h4 id="1-1-界面模板选型"><a href="#1-1-界面模板选型" class="headerlink" title="1.1 界面模板选型"></a>1.1 界面模板选型</h4><p>​     原来我们可以通过jsp来展示页面，其实在springbootweb中不仅支持jsp,还支持freemarker,velocity,thymeleaf等模板语言。  所谓模板就是一个基本结构，到时候往结构中放入数据就得到页面。  并且springboot推荐使用<strong>Thymeleaf</strong>,以后如果我们需要在springboot写界面建议使用Thymeleaf，而不用jsp了。</p>
 <h4 id="1-2-Thymeleaf入门"><a href="#1-2-Thymeleaf入门" class="headerlink" title="1.2 Thymeleaf入门"></a>1.2 <strong>Thymeleaf</strong>入门</h4><ol>
 <li><p>导入jar</p>
@@ -669,7 +651,7 @@
 
 </li>
 <li><p>Thymeleaf基本语法说明</p>
-<p><img src="/./springboot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%BA%8C/1658459163125.png" alt="1658459163125"></p>
+<p><img src="/breeze/3607038d.htm/1658459163125.png" alt="1658459163125"></p>
 </li>
 </ol>
 <h4 id="1-3-Thymeleaf的自动配置原理【扩展】"><a href="#1-3-Thymeleaf的自动配置原理【扩展】" class="headerlink" title="1.3  Thymeleaf的自动配置原理【扩展】"></a>1.3  Thymeleaf的自动配置原理【扩展】</h4><p>​      刚才我在返回界面的时候，我直接返回一个”hello”,它凭什么能够找到&#x2F;templates&#x2F;hello.html呢？那是因为springboot给我自动配置了ViewResoler，具体在哪儿配置的呢？</p>
@@ -680,7 +662,7 @@
 <li><p>默认首页: 在默认的springMVC自动配置下，会加载静态资源文件夹下的index.html文件作为项目首页。springBoot默认的静态资源路径有五个，按照优先级分别是项目的根路径 &#x2F;，classpath:&#x2F;META-INF&#x2F;resources&#x2F;，classpath:&#x2F;resources&#x2F;，classpath:&#x2F;static&#x2F;，classpath:&#x2F;public&#x2F;，优先级同显示顺序 。</p>
 </li>
 <li><p>网页图标: 默认是开启的，默认把src&#x2F;main&#x2F;resources&#x2F;static&#x2F;favicon.ico 作为网页图标，可以在application.yml中设置关闭Favicon</p>
-<p><img src="/./springboot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%BA%8C/1658460356674.png" alt="1658460356674"></p>
+<p><img src="/breeze/3607038d.htm/1658460356674.png" alt="1658460356674"></p>
 </li>
 </ul>
 <h3 id="2-响应json数据和页面"><a href="#2-响应json数据和页面" class="headerlink" title="2.响应json数据和页面"></a>2.响应json数据和页面</h3><h4 id="2-1-Controller-ResponseBody"><a href="#2-1-Controller-ResponseBody" class="headerlink" title="2.1 Controller+ResponseBody"></a>2.1 Controller+ResponseBody</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ronghuanet.controller;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.ronghuanet.domain.User;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Controller;</span><br><span class="line"><span class="keyword">import</span> org.springframework.ui.Model;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.ResponseBody;</span><br><span class="line"></span><br><span class="line"><span class="comment">//一个Controller，有多个方法，有的方法需要响应界面，有的方法需要响应json</span></span><br><span class="line"><span class="comment">/*方案1：Controller</span></span><br><span class="line"><span class="comment">   1)响应页面，直接返回字符串</span></span><br><span class="line"><span class="comment">   2）响应json，直接返回对象并且加上@ResponseBody注解</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line"><span class="meta">@Controller</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/viewAndJson01&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ViewAndJson01Controller</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//响应界面</span></span><br><span class="line">    <span class="meta">@RequestMapping(&quot;/view&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">hello</span><span class="params">(Model model)</span>&#123;</span><br><span class="line">        model.addAttribute(<span class="string">&quot;msg&quot;</span>, <span class="string">&quot;你是个沙雕！&quot;</span>);</span><br><span class="line">        model.addAttribute(<span class="string">&quot;user&quot;</span>, <span class="keyword">new</span> <span class="title class_">User</span>(<span class="number">1L</span>, <span class="string">&quot;zs&quot;</span>, <span class="number">18</span>));</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;hello&quot;</span>;  <span class="comment">// /template/hello.html</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//响应jsong</span></span><br><span class="line">    <span class="meta">@RequestMapping(&quot;/json&quot;)</span></span><br><span class="line">    <span class="meta">@ResponseBody</span></span><br><span class="line">    <span class="keyword">public</span>  User <span class="title function_">jsonData</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">User</span>(<span class="number">1L</span>, <span class="string">&quot;zs&quot;</span>, <span class="number">18</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -760,7 +742,7 @@
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">UserMapper</span> &#123;</span><br><span class="line">    User <span class="title function_">loadById</span><span class="params">(Long id)</span>;<span class="comment">//基本测试</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">remove</span><span class="params">(Long id)</span>;<span class="comment">//做事务测试</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Mapepr.xml</p>
-<p><img src="/./springboot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%BA%8C/1658472225754.png" alt="1658472225754"></p>
+<p><img src="/breeze/3607038d.htm/1658472225754.png" alt="1658472225754"></p>
 <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span> ?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">mapper</span> <span class="keyword">PUBLIC</span> <span class="string">&quot;-//mybatis.org//DTD Mapper 3.0//EN&quot;</span></span></span><br><span class="line"><span class="meta">        <span class="string">&quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--namespace就是映射接口全限定名--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mapper</span> <span class="attr">namespace</span>=<span class="string">&quot;com.ronghuanet.mapper.UserMapper&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">delete</span> <span class="attr">id</span>=<span class="string">&quot;remove&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;long&quot;</span>&gt;</span></span><br><span class="line">        delete from t_user where id = #&#123;id&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">delete</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;loadById&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;User&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;long&quot;</span>&gt;</span></span><br><span class="line">        select * from t_user where id = #&#123;id&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mapper</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 
@@ -771,7 +753,7 @@
 <h3 id="2-Mapper多模块开发"><a href="#2-Mapper多模块开发" class="headerlink" title="2 Mapper多模块开发"></a>2 Mapper多模块开发</h3><p>​	一个项目中，分成多个模块，方便管理。比如下面分成系统管理、用户管理两个模块</p>
 <ol>
 <li><p>拷贝单模块代码并改造结构</p>
-<p><img src="/./springboot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%BA%8C/1658473062104.png" alt="1658473062104"></p>
+<p><img src="/breeze/3607038d.htm/1658473062104.png" alt="1658473062104"></p>
 </li>
 <li><p>调整配置</p>
 <p>别名包</p>
@@ -798,13 +780,31 @@
 </ol>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="meta">@Transactional(readOnly = true,propagation = Propagation.SUPPORTS)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">UserServiceImpl</span> <span class="keyword">implements</span> <span class="title class_">IUserService</span> &#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> UserMapper userMapper;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//增删改要配置写事务</span></span><br><span class="line">    <span class="meta">@Transactional</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">deleteById</span><span class="params">(Long id)</span> &#123;</span><br><span class="line">        userMapper.remove(id);</span><br><span class="line">        <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>/<span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//使用类上配置的事务</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> User <span class="title function_">getById</span><span class="params">(Long id)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> userMapper.loadById(id);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
+<h2 id><a href="#" class="headerlink" title></a></h2>]]></content>
       <categories>
         <category>java后端</category>
       </categories>
       <tags>
         <tag>java</tag>
         <tag>springboot</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>测试博客发布</title>
+    <url>/breeze/a11f55b1.html</url>
+    <content><![CDATA[<p><strong>下面看进行一个简单的java程序测试，它将输出字符串 Hello World！</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MyFirstBolgTest</span>&#123;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    *	第一个java测试博客程序</span></span><br><span class="line"><span class="comment">    *   它将打印字符串 Hello World!</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Hello World!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>测试字数统计和修改时间</strong></p>
+<p><strong>测试图片显示</strong></p>
+<p><img src="/breeze/a11f55b1.htm/bohdan-orlov-wTdzR9KMzQQ-unsplash.jpg"></p>
+<hr>
+<p><img src="/breeze/a11f55b1.htm/johan-lindberg-6bJ5Oo-2QoI-unsplash.jpg"></p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
       </tags>
   </entry>
 </search>
