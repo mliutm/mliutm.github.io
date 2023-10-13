@@ -129,7 +129,7 @@
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">		.p1&#123;</span><br><span class="line">			</span><br><span class="line">            font-size: 10px;</span><br><span class="line">            /*取值为：数字+px ， 调整文字之间的行间距，  如果只写数字就是字体大小的多少倍*/</span><br><span class="line">            line-height: 36px;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;p1&quot;</span>&gt;</span>除了默认的快捷键和操作外，我们还可以通过安装扩展程序的方式实现删除一行。常用的扩展程序是“Delete Lines”，它不仅可以删除一行，还可以删除多行和选中区域。在安装了该插件之后，只需要选中所要删除的内容，然后按下“Ctrl+Shift+K”，即可快捷删除除了默认的快捷键和操作外，我们还可以通过安装扩展程序的方式实现删除一行。常用的扩展程序是“Delete Lines”，它不仅可以删除一行，还可以删除多行和选中区域。在安装了该插件之后，只需要选中所要删除的内容，然后按下“Ctrl+Shift+K”，即可快捷删除除了默认的快捷键和操作外，我们还可以通过安装扩展程序的方式实现删除一行。常用的扩展程序是“Delete Lines”，它不仅可以删除一行，还可以删除多行和选中区域。在安装了该插件之后，只需要选中所要删除的内容，然后按下“Ctrl+Shift+K”，即可快捷删除除了默认的快捷键和操作外，我们还可以通过安装扩展程序的方式实现删除一行。常用的扩展程序是“Delete Lines”，它不仅可以删除一行，还可以删除多行和选中区域。在安装了该插件之后，只需要选中所要删除的内容，然后按下“Ctrl+Shift+K”，即可快捷删除除了默认的快捷键和操作外，我们还可以通过安装扩展程序的方式实现删除一行。常用的扩展程序是“Delete Lines”，它不仅可以删除一行，还可以删除多行和选中区域。在安装了该插件之后，只需要选中所要删除的内容，然后按下“Ctrl+Shift+K”，即可快捷删除<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h2 id="4-综合练习"><a href="#4-综合练习" class="headerlink" title="4. 综合练习"></a>4. 综合练习</h2><p>练习1：</p>
-<p><img src="/breeze/a5fd3b32.htm/1688377495992.png" alt="1688377495992"></p>
+<p><img src="/./css%E6%A0%B7%E5%BC%8F%E5%85%A5%E9%97%A8/1688377495992.png" alt="1688377495992"></p>
 <h2 id="5-背景相关样式"><a href="#5-背景相关样式" class="headerlink" title="5. 背景相关样式"></a>5. 背景相关样式</h2><table>
 <thead>
 <tr>
@@ -180,7 +180,7 @@
 <p>提示：背景图默认有<strong>平铺（复制）效果</strong>。 </p>
 </blockquote>
 <h3 id="5-2-平铺方式"><a href="#5-2-平铺方式" class="headerlink" title="5.2 平铺方式"></a>5.2 平铺方式</h3><p>属性名：<strong>background-repeat</strong>（bgr） </p>
-<img src="/breeze/a5fd3b32.htm/1680320072292.png" alt="1680320072292" style="width:50%;">
+<img src="./css%E6%A0%B7%E5%BC%8F%E5%85%A5%E9%97%A8/1680320072292.png" alt="1680320072292" style="width:50%;" />
 
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">400px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">400px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: pink;</span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">./images/1.png</span>);</span><br><span class="line"></span><br><span class="line">  <span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -189,7 +189,7 @@
 <ul>
 <li>关键字</li>
 </ul>
-<img src="/breeze/a5fd3b32.htm/1680320211424.png" alt="1680320211424" style="width: 50%; zoom: 50%;">
+<img src="./css%E6%A0%B7%E5%BC%8F%E5%85%A5%E9%97%A8/1680320211424.png" alt="1680320211424" style="width: 50%; zoom: 50%;" />
 
 <ul>
 <li>坐标<ul>
@@ -246,10 +246,28 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/breeze/4a17b156.html</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>css样式进阶</title>
     <url>/breeze/9f9126f5.html</url>
     <content><![CDATA[<h1 id="css进阶"><a href="#css进阶" class="headerlink" title="css进阶"></a>css进阶</h1><h2 id="1-显示模式"><a href="#1-显示模式" class="headerlink" title="1. 显示模式"></a>1. 显示模式</h2><p>显示模式：标签（元素）的显示方式。 </p>
-<img src="/breeze/9f9126f5.htm/1680320464551.png" alt="1680320464551" style="width:80%;">
+<img src="./css%E6%A0%B7%E5%BC%8F%E8%BF%9B%E9%98%B6/1680320464551.png" alt="1680320464551" style="width:80%;" />
 
 <p>作用：布局网页的时候，根据标签的显示模式选择合适的标签摆放内容。 </p>
 <h3 id="1-1-块级元素"><a href="#1-1-块级元素" class="headerlink" title="1.1 块级元素"></a>1.1 块级元素</h3><p>特点：</p>
@@ -258,7 +276,7 @@
 <li>宽度默认是父级的100%</li>
 <li>添加宽高属性生效</li>
 </ul>
-<img src="/breeze/9f9126f5.htm/1680320578369.png" alt="1680320578369" style="width:50%;">
+<img src="./css%E6%A0%B7%E5%BC%8F%E8%BF%9B%E9%98%B6/1680320578369.png" alt="1680320578369" style="width:50%;" />
 
 <h3 id="1-2-行内元素"><a href="#1-2-行内元素" class="headerlink" title="1.2 行内元素"></a>1.2 行内元素</h3><p>特点：</p>
 <ul>
@@ -266,7 +284,7 @@
 <li>设置宽高属性不生效</li>
 <li>宽高尺寸由内容撑开</li>
 </ul>
-<img src="/breeze/9f9126f5.htm/1680320583985.png" alt="1680320583985" style="width:33%;">
+<img src="./css%E6%A0%B7%E5%BC%8F%E8%BF%9B%E9%98%B6/1680320583985.png" alt="1680320583985" style="width:33%;" />
 
 <h3 id="1-3-行内块元素"><a href="#1-3-行内块元素" class="headerlink" title="1.3 行内块元素"></a>1.3 行内块元素</h3><p>特点：</p>
 <ul>
@@ -274,10 +292,10 @@
 <li>设置宽高属性生效</li>
 <li>宽高尺寸也可以由内容撑开</li>
 </ul>
-<img src="/breeze/9f9126f5.htm/1680320590005.png" alt="1680320590005" style="width:50%;">
+<img src="./css%E6%A0%B7%E5%BC%8F%E8%BF%9B%E9%98%B6/1680320590005.png" alt="1680320590005" style="width:50%;" />
 
 <h3 id="1-4-转换显示模式"><a href="#1-4-转换显示模式" class="headerlink" title="1.4 转换显示模式"></a>1.4 转换显示模式</h3><p>属性：<strong>display</strong></p>
-<img src="/breeze/9f9126f5.htm/1680320613034.png" alt="1680320613034" style="width:50%;">
+<img src="./css%E6%A0%B7%E5%BC%8F%E8%BF%9B%E9%98%B6/1680320613034.png" alt="1680320613034" style="width:50%;" />
 
 <h2 id="2-盒子模型"><a href="#2-盒子模型" class="headerlink" title="2. 盒子模型"></a>2. 盒子模型</h2><p>作用：布局网页，摆放盒子和内容。</p>
 <h3 id="2-1-盒子模型-组成"><a href="#2-1-盒子模型-组成" class="headerlink" title="2.1 盒子模型-组成"></a>2.1 盒子模型-组成</h3><ul>
@@ -288,15 +306,15 @@
 </ul>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">5px</span> solid brown;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">20px</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: pink;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<img src="/breeze/9f9126f5.htm/1680330928735.png" alt="1680330928735" style="width:33%;">
+<img src="./css%E6%A0%B7%E5%BC%8F%E8%BF%9B%E9%98%B6/1680330928735.png" alt="1680330928735" style="width:33%;" />
 
-<img src="/breeze/9f9126f5.htm/1680330935635.png" alt="1680330935635" style="width:33%;">
+<img src="./css%E6%A0%B7%E5%BC%8F%E8%BF%9B%E9%98%B6/1680330935635.png" alt="1680330935635" style="width:33%;" />
 
 
 
 <h3 id="2-2-边框线"><a href="#2-2-边框线" class="headerlink" title="2.2 边框线"></a>2.2 边框线</h3><h4 id="2-2-1-四个方向"><a href="#2-2-1-四个方向" class="headerlink" title="2.2.1 四个方向"></a>2.2.1 四个方向</h4><p>属性名：<strong>border</strong>（bd）</p>
 <p>属性值：边框线粗细  线条样式  颜色（不区分顺序）</p>
-<img src="/breeze/9f9126f5.htm/1680330976390.png" alt="1680330976390" style="width:33%;">
+<img src="./css%E6%A0%B7%E5%BC%8F%E8%BF%9B%E9%98%B6/1680330976390.png" alt="1680330976390" style="width:33%;" />
 
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">5px</span> solid brown;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: pink;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -319,7 +337,7 @@
 <blockquote>
 <p>技巧：从<strong>上</strong>开始<strong>顺时针</strong>赋值，当前方向没有数值则与<strong>对面取值相同</strong>。 </p>
 </blockquote>
-<h3 id="2-4-尺寸计算"><a href="#2-4-尺寸计算" class="headerlink" title="2.4 尺寸计算"></a>2.4 尺寸计算</h3><img src="/breeze/9f9126f5.htm/1680331322935.png" alt="1680331322935" style="width:33%;">
+<h3 id="2-4-尺寸计算"><a href="#2-4-尺寸计算" class="headerlink" title="2.4 尺寸计算"></a>2.4 尺寸计算</h3><img src="./css%E6%A0%B7%E5%BC%8F%E8%BF%9B%E9%98%B6/1680331322935.png" alt="1680331322935" style="width:33%;" />
 
 <p>默认情况：盒子尺寸 &#x3D; 内容尺寸 + border 尺寸 + 内边距尺寸</p>
 <p>结论：给盒子加 border &#x2F; padding 会撑大盒子</p>
@@ -331,32 +349,32 @@
 <h3 id="2-5-外边距"><a href="#2-5-外边距" class="headerlink" title="2.5 外边距"></a>2.5 外边距</h3><p>作用：拉开两个盒子之间的距离</p>
 <p>属性名：<strong>margin</strong></p>
 <p>提示：与 padding 属性值写法、含义相同</p>
-<h3 id="2-6-版心居中"><a href="#2-6-版心居中" class="headerlink" title="2.6 版心居中"></a>2.6 版心居中</h3><p><img src="/breeze/9f9126f5.htm/1688451516221.png" alt="1688451516221"></p>
+<h3 id="2-6-版心居中"><a href="#2-6-版心居中" class="headerlink" title="2.6 版心居中"></a>2.6 版心居中</h3><p><img src="/./css%E6%A0%B7%E5%BC%8F%E8%BF%9B%E9%98%B6/1688451516221.png" alt="1688451516221"></p>
 <p>左右 margin 值 为 auto（盒子要有宽度）</p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">1000px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: pink;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="2-7-清除默认样式"><a href="#2-7-清除默认样式" class="headerlink" title="2.7 清除默认样式"></a>2.7 清除默认样式</h3><img src="/breeze/9f9126f5.htm/1680331558304.png" alt="1680331558304" style="width:50%;">
+<h3 id="2-7-清除默认样式"><a href="#2-7-清除默认样式" class="headerlink" title="2.7 清除默认样式"></a>2.7 清除默认样式</h3><img src="./css%E6%A0%B7%E5%BC%8F%E8%BF%9B%E9%98%B6/1680331558304.png" alt="1680331558304" style="width:50%;" />
 
 <p>清除标签默认的样式，比如：默认的内外边距。 </p>
-<img src="/breeze/9f9126f5.htm/1680331580746.png" alt="1680331580746" style="width:50%;">
+<img src="./css%E6%A0%B7%E5%BC%8F%E8%BF%9B%E9%98%B6/1680331580746.png" alt="1680331580746" style="width:50%;" />
 
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 清除默认内外边距 */</span></span><br><span class="line">* &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 清除列表项目符号 */</span></span><br><span class="line"><span class="selector-tag">li</span> &#123;</span><br><span class="line">  <span class="attribute">list-style</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="2-7-元素溢出"><a href="#2-7-元素溢出" class="headerlink" title="2.7 元素溢出"></a>2.7 元素溢出</h3><p>作用：控制溢出元素的内容的显示方式。</p>
 <p>属性名：<strong>overflow</strong></p>
-<p><img src="/breeze/9f9126f5.htm/1680331623305.png" alt="1680331623305"></p>
+<p><img src="/./css%E6%A0%B7%E5%BC%8F%E8%BF%9B%E9%98%B6/1680331623305.png" alt="1680331623305"></p>
 <h3 id="2-8-圆角"><a href="#2-8-圆角" class="headerlink" title="2.8 圆角"></a>2.8 圆角</h3><p>作用：设置元素的外边框为圆角。</p>
 <p>属性名：<strong>border-radius</strong></p>
 <p>属性值：数字+px &#x2F; 百分比</p>
 <p>提示：属性值是圆角半径</p>
-<img src="/breeze/9f9126f5.htm/1680334014390.png" alt="1680334014390" style="width:50%;">
+<img src="./css%E6%A0%B7%E5%BC%8F%E8%BF%9B%E9%98%B6/1680334014390.png" alt="1680334014390" style="width:50%;" />
 
 
 
 <ul>
 <li>多值写法</li>
 </ul>
-<p><img src="/breeze/9f9126f5.htm/1680334027657.png" alt="1680334027657"></p>
+<p><img src="/./css%E6%A0%B7%E5%BC%8F%E8%BF%9B%E9%98%B6/1680334027657.png" alt="1680334027657"></p>
 <blockquote>
 <p>技巧：从左上角开始顺时针赋值，当前角没有数值则与对角取值相同。 </p>
 </blockquote>
@@ -370,7 +388,7 @@
 </ul>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">80px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: orange;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">40px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<img src="/breeze/9f9126f5.htm/1680334136242.png" alt="1680334136242" style="width:33%;">
+<img src="./css%E6%A0%B7%E5%BC%8F%E8%BF%9B%E9%98%B6/1680334136242.png" alt="1680334136242" style="width:33%;" />
 
 <h3 id="2-9-盒子阴影（拓展）"><a href="#2-9-盒子阴影（拓展）" class="headerlink" title="2.9 盒子阴影（拓展）"></a>2.9 盒子阴影（拓展）</h3><p>作用：给元素设置阴影效果</p>
 <p>属性名：<strong>box-shadow</strong></p>
@@ -384,7 +402,7 @@
 
 <h2 id="3-Flex布局"><a href="#3-Flex布局" class="headerlink" title="3. Flex布局"></a>3. Flex布局</h2><p>Flex 布局也叫<strong>弹性布局</strong>，是浏览器<strong>提倡的布局模型</strong>，非常适合<strong>结构化</strong>布局，提供了强大的空间分布和对齐能力。</p>
 <p>Flex 模型不会产生浮动布局中脱标现象，布局网页更简单、更灵活。</p>
-<p><img src="/breeze/9f9126f5.htm/1680335815005.png" alt="1680335815005"></p>
+<p><img src="/./css%E6%A0%B7%E5%BC%8F%E8%BF%9B%E9%98%B6/1680335815005.png" alt="1680335815005"></p>
 <h3 id="3-1-Flex组成"><a href="#3-1-Flex组成" class="headerlink" title="3.1 Flex组成"></a>3.1 Flex组成</h3><p>设置方式：给<strong>父</strong>元素设置 <strong>display: flex</strong>，子元素可以自动挤压或拉伸</p>
 <p>组成部分：</p>
 <ul>
@@ -393,17 +411,17 @@
 <li>主轴：默认在<strong>水平</strong>方向</li>
 <li>侧轴 &#x2F; 交叉轴：默认在<strong>垂直</strong>方向</li>
 </ul>
-<p><img src="/breeze/9f9126f5.htm/1680335870554.png" alt="1680335870554"></p>
+<p><img src="/./css%E6%A0%B7%E5%BC%8F%E8%BF%9B%E9%98%B6/1680335870554.png" alt="1680335870554"></p>
 <h3 id="3-2-主轴对齐方式"><a href="#3-2-主轴对齐方式" class="headerlink" title="3.2 主轴对齐方式"></a>3.2 主轴对齐方式</h3><p>属性名：<strong>justify-content</strong></p>
-<p><img src="/breeze/9f9126f5.htm/1680335902526.png" alt="1680335902526"></p>
+<p><img src="/./css%E6%A0%B7%E5%BC%8F%E8%BF%9B%E9%98%B6/1680335902526.png" alt="1680335902526"></p>
 <h3 id="3-3-侧轴对齐方式"><a href="#3-3-侧轴对齐方式" class="headerlink" title="3.3 侧轴对齐方式"></a>3.3 侧轴对齐方式</h3><ul>
 <li>align-items：当前弹性容器内<strong>所有</strong>弹性盒子的侧轴对齐方式（给<strong>弹性容器</strong>设置）</li>
 <li>align-self：单独控制<strong>某个弹性盒子</strong>的侧轴对齐方式（给<strong>弹性盒子</strong>设置）</li>
 </ul>
-<p><img src="/breeze/9f9126f5.htm/1680335957166.png" alt="1680335957166"></p>
+<p><img src="/./css%E6%A0%B7%E5%BC%8F%E8%BF%9B%E9%98%B6/1680335957166.png" alt="1680335957166"></p>
 <h3 id="3-4-修改主轴方向"><a href="#3-4-修改主轴方向" class="headerlink" title="3.4 修改主轴方向"></a>3.4 修改主轴方向</h3><p><strong>主轴默认在水平方向，侧轴默认在垂直方向</strong></p>
 <p>属性名：<strong>flex-direction</strong></p>
-<p><img src="/breeze/9f9126f5.htm/1680335988425.png" alt="1680335988425"></p>
+<p><img src="/./css%E6%A0%B7%E5%BC%8F%E8%BF%9B%E9%98%B6/1680335988425.png" alt="1680335988425"></p>
 <h3 id="3-5-弹性伸缩比"><a href="#3-5-弹性伸缩比" class="headerlink" title="3.5 弹性伸缩比"></a>3.5 弹性伸缩比</h3><p>作用：控制弹性盒子的主轴方向的尺寸。</p>
 <p>属性名：<strong>flex</strong></p>
 <p>属性值：整数数字，表示占用<strong>父级剩余尺寸的份数</strong>。</p>
@@ -415,7 +433,7 @@
 <li>nowrap：不换行（默认）</li>
 </ul>
 <h3 id="3-7-行内对齐方式"><a href="#3-7-行内对齐方式" class="headerlink" title="3.7 行内对齐方式"></a>3.7 行内对齐方式</h3><p>属性名：<strong>align-content</strong> </p>
-<p><img src="/breeze/9f9126f5.htm/1680336183457.png" alt="1680336183457"></p>
+<p><img src="/./css%E6%A0%B7%E5%BC%8F%E8%BF%9B%E9%98%B6/1680336183457.png" alt="1680336183457"></p>
 <blockquote>
 <p>注意：该属性对<strong>单行</strong>弹性盒子模型<strong>无效</strong>。 </p>
 </blockquote>
@@ -428,33 +446,15 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/breeze/4a17b156.html</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>html入门</title>
     <url>/breeze/8e09ad1c.html</url>
     <content><![CDATA[<h1 id="Html入门"><a href="#Html入门" class="headerlink" title="Html入门"></a>Html入门</h1><p>html+css+js</p>
 <h2 id="1-HTML概述"><a href="#1-HTML概述" class="headerlink" title="1 HTML概述"></a>1 HTML概述</h2><p>​		HTML(Hypertext Markup Language)超文本标记语言，是一种编写网页(html文档)的技术。主要通过<strong>HTML标签</strong>对网页中的文本、图片、音频、视频等内容进行描述，在浏览器里面展示不同的效果。</p>
-<p><img src="/breeze/8e09ad1c.htm/1688351381891-1696778504702-1.png" alt="1688351381891"></p>
+<p><img src="/./html%E5%85%A5%E9%97%A8/1688351381891-1696778504702-1.png" alt="1688351381891"></p>
 <p>使用浏览器打开查看效果。</p>
 <p>​			所以我们学习html，就是学习各种标签，通过浏览器渲染页面效果。</p>
 <h2 id="2-工具的安装"><a href="#2-工具的安装" class="headerlink" title="2 工具的安装"></a>2 工具的安装</h2><h3 id="2-1-工具下载"><a href="#2-1-工具下载" class="headerlink" title="2.1 工具下载"></a>2.1 工具下载</h3><p>​			在上面的案例中记事本可以编写html文件，但是编写效率非常底下。在实际的工作中更加注重开发效率对于专业的前端工作者常使用Visual Studio Code 、 Webstorm 、 Sublime 、Dreamweaver、 Hbuilder 等一些开发工具。本次课程我们选用VS Code。下载地址：<a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></p>
-<img src="/breeze/8e09ad1c.htm/1688351803898-1696778504703-2.png" alt="1688351803898" style="width:50%;">
+<img src="./html%E5%85%A5%E9%97%A8/1688351803898-1696778504703-2.png" alt="1688351803898" style="width:50%;" />
 
 <p>​	</p>
 <p>​		下载以后根据提示“下一步”完成工具的安装。</p>
@@ -463,7 +463,7 @@
 <li>汉化插件 Chinese</li>
 <li>快速打开浏览器插件  open in browser</li>
 </ul>
-<p><img src="/breeze/8e09ad1c.htm/1688352388781-1696778504703-3.png" alt="1688352388781"></p>
+<p><img src="/./html%E5%85%A5%E9%97%A8/1688352388781-1696778504703-3.png" alt="1688352388781"></p>
 <h3 id="2-3-打开项目与创建文件步骤"><a href="#2-3-打开项目与创建文件步骤" class="headerlink" title="2.3 打开项目与创建文件步骤"></a>2.3 打开项目与创建文件步骤</h3><ol>
 <li><p>双击打开VS Code软件 </p>
 </li>
@@ -472,7 +472,7 @@
 <li><p>点击目录上的**+新建文件按钮<strong>创建页面，注意：</strong>文件后缀名需要是.html**</p>
 </li>
 </ol>
-<p><img src="/breeze/8e09ad1c.htm/1688352561934-1696778504703-4.png" alt="1688352561934"></p>
+<p><img src="/./html%E5%85%A5%E9%97%A8/1688352561934-1696778504703-4.png" alt="1688352561934"></p>
 <h3 id="2-4-VSCode-的基本使用与快捷键"><a href="#2-4-VSCode-的基本使用与快捷键" class="headerlink" title="2.4 VSCode 的基本使用与快捷键"></a>2.4 VSCode 的基本使用与快捷键</h3><ol>
 <li>保存文件：ctrl + s  (写完文件之后务必需要保存文件，否则网页无变化)</li>
 <li>快速查看网页效果：右击 → Open in Default Browser 快捷键：alt + b (必须安装了open in browser 插件)</li>
@@ -506,21 +506,21 @@
 <li>标签之间可以嵌套使用。</li>
 </ol>
 <h2 id="4-HTML-标签"><a href="#4-HTML-标签" class="headerlink" title="4 HTML 标签"></a>4 HTML 标签</h2><h3 id="4-1-标题标签"><a href="#4-1-标题标签" class="headerlink" title="4. 1 标题标签"></a>4. 1 标题标签</h3><p>​	主要用于一些新闻页面的标题。</p>
-<p>​	<img src="/breeze/8e09ad1c.htm/1688353696015-1696778504703-5.png" alt="1688353696015"></p>
+<p>​	<img src="/./html%E5%85%A5%E9%97%A8/1688353696015-1696778504703-5.png" alt="1688353696015"></p>
 <p>代码：</p>
-<p><img src="/breeze/8e09ad1c.htm/1688354013430-1696778504703-6.png" alt="1688354013430"></p>
+<p><img src="/./html%E5%85%A5%E9%97%A8/1688354013430-1696778504703-6.png" alt="1688354013430"></p>
 <h3 id="4-2-段落标签"><a href="#4-2-段落标签" class="headerlink" title="4.2 段落标签"></a>4.2 段落标签</h3><p>​	p标签用来定义段落，具有自动换行的效果。一般用于文章的内容包裹段落</p>
-<p><img src="/breeze/8e09ad1c.htm/1688355387634-1696778504703-7.png" alt="1688355387634"></p>
+<p><img src="/./html%E5%85%A5%E9%97%A8/1688355387634-1696778504703-7.png" alt="1688355387634"></p>
 <h3 id="4-3-换行标签"><a href="#4-3-换行标签" class="headerlink" title="4.3 换行标签"></a>4.3 换行标签</h3><p>​	 br可插入一个简单的换行符。 </p>
-<p><img src="/breeze/8e09ad1c.htm/1688355736924-1696778504703-8.png" alt="1688355736924"></p>
+<p><img src="/./html%E5%85%A5%E9%97%A8/1688355736924-1696778504703-8.png" alt="1688355736924"></p>
 <h3 id="4-4-水平线标签"><a href="#4-4-水平线标签" class="headerlink" title="4.4 水平线标签"></a>4.4 水平线标签</h3><p>hr标签在 HTML 页面中创建一条水平线。 </p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">hr</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 
 
-<p><img src="/breeze/8e09ad1c.htm/1688355893411-1696778504703-9.png" alt="1688355893411"></p>
+<p><img src="/./html%E5%85%A5%E9%97%A8/1688355893411-1696778504703-9.png" alt="1688355893411"></p>
 <p>综合练习：请使用学习过的知识实现以下效果。</p>
-<p><img src="/breeze/8e09ad1c.htm/1688364376892-1696778504703-10.png" alt="1688364376892"></p>
+<p><img src="/./html%E5%85%A5%E9%97%A8/1688364376892-1696778504703-10.png" alt="1688364376892"></p>
 <h3 id="4-5-媒体标签"><a href="#4-5-媒体标签" class="headerlink" title="4.5 媒体标签"></a>4.5 媒体标签</h3><p><strong>语法：</strong></p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">alt</span>=<span class="string">&quot;&quot;</span> <span class="attr">src</span>=<span class="string">&quot;图片路径&quot;</span> <span class="attr">width</span>=<span class="string">&quot;&quot;</span> <span class="attr">height</span>=<span class="string">&quot;&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -560,17 +560,17 @@
 </li>
 </ol>
 <h3 id="4-7-列表标签"><a href="#4-7-列表标签" class="headerlink" title="4.7 列表标签"></a>4.7 列表标签</h3><p>​		列表的使用场景如下图，按照行的方式，整齐显示内容。</p>
-<p><img src="/breeze/8e09ad1c.htm/1688365229996-1696778504703-11.png" alt="1688365229996"></p>
+<p><img src="/./html%E5%85%A5%E9%97%A8/1688365229996-1696778504703-11.png" alt="1688365229996"></p>
 <h4 id="4-7-1-无序列表"><a href="#4-7-1-无序列表" class="headerlink" title="4.7.1 无序列表"></a>4.7.1 无序列表</h4><p><strong>语法</strong></p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">li</span>&gt;</span>列表一<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">li</span>&gt;</span>列表二<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">li</span>&gt;</span>列表三<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<img src="/breeze/8e09ad1c.htm/1688365446636-1696778504704-12.png" alt="1688365446636" style="width:25%;">
+<img src="./html%E5%85%A5%E9%97%A8/1688365446636-1696778504704-12.png" alt="1688365446636" style="width:25%;" />
 
 <h4 id="4-7-2-有序列表"><a href="#4-7-2-有序列表" class="headerlink" title="4.7.2 有序列表"></a>4.7.2 有序列表</h4><p>​		在网页中表示一组有顺序之分的列表，一般用例如排行榜功能。</p>
 <p>​		<strong>语法</strong></p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">热歌榜<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>笼<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>听悲伤的情歌<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>Letting Go<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<img src="/breeze/8e09ad1c.htm/1688365676859-1696778504704-13.png" alt="1688365676859" style="width:25%;">
+<img src="./html%E5%85%A5%E9%97%A8/1688365676859-1696778504704-13.png" alt="1688365676859" style="width:25%;" />
 
 <h4 id="4-7-3-自定义列表"><a href="#4-7-3-自定义列表" class="headerlink" title="4.7.3 自定义列表"></a>4.7.3 自定义列表</h4><p>​	<strong>语法：</strong></p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- </span></span><br><span class="line"><span class="comment">       dl:自定义列表的整体，用来包裹dt/dd</span></span><br><span class="line"><span class="comment">       dt:自定义列表的主题</span></span><br><span class="line"><span class="comment">       dd:自定义列表的针对主题的内容，会默认显示缩进效果   </span></span><br><span class="line"><span class="comment">       注意：dl标签中只允许包含dt/dd标签，dt/dd标签可以包含任意内容</span></span><br><span class="line"><span class="comment">    --&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">dl</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">dt</span>&gt;</span></span><br><span class="line">           热门产品</span><br><span class="line">       <span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">dd</span>&gt;</span>云服务器<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">dd</span>&gt;</span>弹性公网IP<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">dd</span>&gt;</span>云备份<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -578,7 +578,7 @@
 <p> <strong>注意：dl标签中只允许包含dt&#x2F;dd标签，dt&#x2F;dd标签可以包含任意内容</strong></p>
 <h3 id="4-8-表格标签"><a href="#4-8-表格标签" class="headerlink" title="4.8 表格标签"></a>4.8 表格标签</h3><p><strong>语法：</strong></p>
 <p>一般来说，定义表格之后需要指定宽高，使用border指定表格的边框：</p>
-<table width="200"  height="200"  border="1"  >
+<table width="200" height="200" border="1" >
 
 
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">一般来说，定义表格之后需要指定宽高，使用border指定表格的边框：</span><br><span class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">width</span>=<span class="string">&quot;200&quot;</span> <span class="attr">height</span>=<span class="string">&quot;200&quot;</span> <span class="attr">border</span>=<span class="string">&quot;1&quot;</span> &gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span>表头1<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span>表头2<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>数据1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>数据2<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -609,7 +609,7 @@
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">三行两列的表格，第一行中单元格合并，第二行中第一列进行行合并：</span><br><span class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">width</span>=<span class="string">&quot;200&quot;</span> <span class="attr">height</span>=<span class="string">&quot;200&quot;</span> <span class="attr">border</span>=<span class="string">&quot;1&quot;</span> &gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">td</span> <span class="attr">colspan</span>=<span class="string">&quot;2&quot;</span>&gt;</span>数据1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">td</span> <span class="attr">rospan</span>=<span class="string">&quot;2&quot;</span>&gt;</span>数据1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">td</span>&gt;</span>数据2<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">td</span>&gt;</span>数据2<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>练习：</p>
-<p>​	<img src="/breeze/8e09ad1c.htm/1688366825521-1696778504704-14.png" alt="1688366825521"></p>
+<p>​	<img src="/./html%E5%85%A5%E9%97%A8/1688366825521-1696778504704-14.png" alt="1688366825521"></p>
 <h3 id="4-9-表单标签"><a href="#4-9-表单标签" class="headerlink" title="4.9 表单标签"></a>4.9 表单标签</h3><p><strong>语法：</strong></p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;&quot;</span> <span class="attr">method</span>=<span class="string">&quot;&quot;</span>&gt;</span></span><br><span class="line">	表单元素</span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -624,7 +624,7 @@
 </li>
 </ol>
 <h4 id="4-9-1-表单元素input"><a href="#4-9-1-表单元素input" class="headerlink" title="4.9.1 表单元素input"></a>4.9.1 表单元素input</h4><p>​	input标签可以通过type属性值的不同，展示不同效果:</p>
-<img src="/breeze/8e09ad1c.htm/1688367111798-1696778504704-15.png" alt="1688367111798" style="width:80%;">
+<img src="./html%E5%85%A5%E9%97%A8/1688367111798-1696778504704-15.png" alt="1688367111798" style="width:80%;" />
 
 <h4 id="4-9-2-表单元素textarea"><a href="#4-9-2-表单元素textarea" class="headerlink" title="4.9.2 表单元素textarea"></a>4.9.2 表单元素textarea</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">	rows属性：规定 textarea 的可见高度，以行数计算</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">	cols属性：规定 textarea 的可见宽度，以平均字符数计算</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">	多行文本域可以被拖动，如何解决？ style=&quot;resize:none;&quot;</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">cols</span>=<span class="string">&quot;&quot;</span> <span class="attr">rows</span>=<span class="string">&quot;&quot;</span> <span class="attr">name</span>=<span class="string">&quot;&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -635,16 +635,16 @@
 <li><p>option元素定义下拉列表中的一个选项，位于 select 元素内部；</p>
 </li>
 <li><option>标签可以在不带有任何属性的情况下使用，默认value是标记中的文本。但是您通常需要使用value属性，此属性会指定出被送往服务器的内容；
-</option></li>
+</li>
 <li><p>请与select元素配合使用此标签，否则这个标签是没有意义的；</p>
 </li>
 </ol>
-<p>注意：<option> 与 </option><option> 之间的值是浏览器显示在下拉列表中的内容，而 value 属性中的值是表单被提交时被发送到服务器的值。如果没有value属性，则将两个标签之间的值发送给服务器；</option></p>
+<p>注意：<option> 与 <option/> 之间的值是浏览器显示在下拉列表中的内容，而 value 属性中的值是表单被提交时被发送到服务器的值。如果没有value属性，则将两个标签之间的值发送给服务器；</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;https://www.baidu.com/&quot;</span> <span class="attr">method</span>=<span class="string">&quot;post&quot;</span>&gt;</span></span><br><span class="line">	用户名：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;username&quot;</span>/&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">	密<span class="symbol">&amp;emsp;</span>码：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;password&quot;</span> <span class="attr">name</span>=<span class="string">&quot;password&quot;</span>/&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">	性别：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">checked</span>=<span class="string">&quot;checked&quot;</span> <span class="attr">name</span>=<span class="string">&quot;sex&quot;</span>&gt;</span> 男  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;sex&quot;</span>&gt;</span>女<span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">	爱好:<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">name</span>=<span class="string">&quot;hobbys&quot;</span>/&gt;</span>女</span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">name</span>=<span class="string">&quot;hobbys&quot;</span>/&gt;</span>男 </span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">name</span>=<span class="string">&quot;hobbys&quot;</span>/&gt;</span>男女饥渴<span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">     头像:<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;file&quot;</span> <span class="attr">name</span>=<span class="string">&quot;icon&quot;</span>/&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">     简介:<span class="tag">&lt;<span class="name">textarea</span> <span class="attr">rows</span>=<span class="string">&quot;10&quot;</span> <span class="attr">cols</span>=<span class="string">&quot;100&quot;</span> <span class="attr">name</span>=<span class="string">&quot;intro&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">     下拉框：<span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">&quot;select&quot;</span>&gt;</span></span><br><span class="line">     		<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;1&quot;</span>&gt;</span>我要一个<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">     		<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;2&quot;</span>&gt;</span>我要二个<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">     		<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;3&quot;</span>&gt;</span>我要三个<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">     		<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;4&quot;</span>&gt;</span>我要四个<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">select</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">	<span class="symbol">&amp;emsp;</span><span class="symbol">&amp;emsp;</span><span class="symbol">&amp;emsp;</span><span class="symbol">&amp;emsp;</span><span class="symbol">&amp;emsp;</span><span class="symbol">&amp;emsp;</span><span class="symbol">&amp;emsp;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">value</span>=<span class="string">&quot;登陆&quot;</span>&gt;</span> <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;reset&quot;</span> <span class="attr">value</span>=<span class="string">&quot;重置&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="4-9-4-表单元素button"><a href="#4-9-4-表单元素button" class="headerlink" title="4.9.4 表单元素button"></a>4.9.4 表单元素button</h4><p>​	button标签，在网页中显示用户点击的按钮。button标签是双标签，更便于包裹其他内容：文字、图片等。</p>
 <p>​	type属性如下：</p>
-<img src="/breeze/8e09ad1c.htm/1688367496562-1696778504704-16.png" alt="1688367496562" style="width: 80%;">
+<img src="./html%E5%85%A5%E9%97%A8/1688367496562-1696778504704-16.png" alt="1688367496562" style="width: 80%;" />
 
 <p>​	</p>
 <h4 id="4-9-5-label标签【扩展】"><a href="#4-9-5-label标签【扩展】" class="headerlink" title="4.9.5 label标签【扩展】"></a>4.9.5 label标签【扩展】</h4><p>​		label 常用于绑定内容与表单标签的关系 </p>
@@ -653,10 +653,10 @@
 <p>​		用法二： </p>
 <p>​				 直接使用label标签把内容（如：文本）和表单标签一起包裹起来 ， 需要把label标签的for属性删除即可。	</p>
 <h2 id="5-练习"><a href="#5-练习" class="headerlink" title="5 练习"></a>5 练习</h2><p>​	第一题：完成以下注册页面（预计60分钟）</p>
-<p><img src="/breeze/8e09ad1c.htm/1688368752328-1696778504704-17.png" alt="1688368752328"></p>
+<p><img src="/./html%E5%85%A5%E9%97%A8/1688368752328-1696778504704-17.png" alt="1688368752328"></p>
 <p>第二题：完成以下表格（预计40分钟）</p>
-<p><img src="/breeze/8e09ad1c.htm/1688368853083-1696778504704-18.png" alt="1688368853083"></p>
-</table>]]></content>
+<p><img src="/./html%E5%85%A5%E9%97%A8/1688368853083-1696778504704-18.png" alt="1688368853083"></p>
+]]></content>
       <categories>
         <category>前端三件套</category>
       </categories>
@@ -968,7 +968,7 @@
 <p>Optional 是个容器：它可以保存类型T的值，或者仅仅保存null。Optional提供很多有用的方法，这样我们就不用显式进行空值检测。</p>
 <p>Optional 类的引入很好的解决空指针异常</p>
 <p>善用Optional可以使我们代码中很多繁琐、丑陋的设计变得十分优雅。</p>
-<h4 id="8-1-声明"><a href="#8-1-声明" class="headerlink" title="8.1 声明"></a>8.1 声明</h4><p>以下是一个 java.util.Optional<T> 类的声明：public final class Optional<T> extends Object</T></T></p>
+<h4 id="8-1-声明"><a href="#8-1-声明" class="headerlink" title="8.1 声明"></a>8.1 声明</h4><p>以下是一个 java.util.Optional<T> 类的声明：public final class Optional<T> extends Object</p>
 <p>Optional容器类常用方法：</p>
 <p><strong>Optional.of(T t):创建要给Optional实例</strong></p>
 <p><strong>Optional.empty():创建一个空的Optional实例</strong></p>
@@ -1027,7 +1027,7 @@
 <p>多线程 线程的创建方式  生命周期  锁机制  synconized与lock区别 threadlocal原理</p>
 <p>线程池  线程池原理 常见4种线程池</p>
 <p>线程池中最大线程数的设置</p>
-<h1 id><a href="#" class="headerlink" title></a></h1>]]></content>
+<h1 id=""><a href="#" class="headerlink" title=""></a></h1>]]></content>
       <categories>
         <category>java</category>
       </categories>
@@ -1062,8 +1062,8 @@
 <p>​       springboot-03–web：模块，普通maven，java</p>
 <p>​        springboot-04–mybatis：模块，普通maven，java</p>
 <p>​       springboot-05–tx：模块，普通maven，java</p>
-<p><img src="/breeze/d872d24.htm/1658369462302.png" alt="1658369462302"></p>
-<p><img src="/breeze/d872d24.htm/1658369477456.png" alt="1658369477456"></p>
+<p><img src="/./springboot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%B8%80/1658369462302.png" alt="1658369462302"></p>
+<p><img src="/./springboot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%B8%80/1658369477456.png" alt="1658369477456"></p>
 <h3 id="2-HelloWorld程序【重要】"><a href="#2-HelloWorld程序【重要】" class="headerlink" title="2.HelloWorld程序【重要】"></a>2.HelloWorld程序【重要】</h3><p>​	这里我们来做一个简单的web程序，大家可以回顾一下使用SpirngMVC如何实现一个web应用，然后对比SpringBoot实现web应用，看一下有什么区别</p>
 <h4 id="2-1-导入依赖"><a href="#2-1-导入依赖" class="headerlink" title="2.1.导入依赖"></a>2.1.导入依赖</h4><p>spring-boot-starter-parent是SpringBoot的父工程，通过继承的方式引入，spring-boot-starter-web是SpringBoot集成web的依赖，主要包括了SpingMVC,Tomcat,日志,自动配置等等相关依赖</p>
 <ul>
@@ -1076,7 +1076,7 @@
 </ul>
 <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="/breeze/d872d24.htm/1658370003764.png" alt="1658370003764"></p>
+<p><img src="/./springboot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%B8%80/1658370003764.png" alt="1658370003764"></p>
 <h4 id="2-2-创建启动类"><a href="#2-2-创建启动类" class="headerlink" title="2.2.创建启动类"></a>2.2.创建启动类</h4><p>@SpringBootApplication注解是SpringBoot的主启动注解，贴在主启动类上， <strong>SpringApplication.run的作用是启动内置的Tomcat</strong>，运行SpringBoot的应用。</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ApplicationConfig</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        SpringApplication.run(ApplicationConfig.class);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -1087,18 +1087,18 @@
 
 <h4 id="2-5-启动测试"><a href="#2-5-启动测试" class="headerlink" title="2.5.启动测试"></a>2.5.启动测试</h4><p>执行main方法启动，浏览器访问：<a href="http://localhost:8080/hello">http://localhost:8080/hello</a></p>
 <h2 id="三-SpringBoot分析【重要】"><a href="#三-SpringBoot分析【重要】" class="headerlink" title="三.SpringBoot分析【重要】"></a>三.SpringBoot分析【重要】</h2><p>通过上面的HellWorld程序我们确实感知到SpringBoot的方便之处，如此快速的就能开发一个Web应用这是以前不可想象的，但是在这些快捷开发的背后不免有些问题，比如：为什么要继承spring-boot-starter-parent，它的作用是什么？spring-boot-starter-web又干了啥？下面我们就来了解一下这些让我们疑惑的地方。</p>
-<h3 id="1-spring-boot-starter-parent"><a href="#1-spring-boot-starter-parent" class="headerlink" title="1.spring-boot-starter-parent"></a>1.spring-boot-starter-parent</h3><p>在pom.xml中我们通过<parent> 继承了 <code>spring-boot-starter-parent</code>，我们说这个项目是SpringBoot的父工程</parent></p>
+<h3 id="1-spring-boot-starter-parent"><a href="#1-spring-boot-starter-parent" class="headerlink" title="1.spring-boot-starter-parent"></a>1.spring-boot-starter-parent</h3><p>在pom.xml中我们通过<parent> 继承了 <code>spring-boot-starter-parent</code>，我们说这个项目是SpringBoot的父工程</p>
 <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.0.5.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>上面有介绍到，这个项目是SpringBoot的父工程，它的作用是帮我们管理了很多的基础jar包，有兴趣的小伙伴可以按住ctrl点进去看一下，在spring-boot-starter-parent中其实还继承了spring-boot-dependencies，在spring-boot-dependencies项目中通过<dependencyManagement>管理了非常多的依赖，同时通过&lt;<properties>维护了这些依赖的version ，总结一下就是SpringBoot的父工程帮我们管理了很多的基础依赖。</properties></dependencyManagement></p>
-<p>当我们继承了<code>spring-boot-starter-parent</code>就意味着我们成为了SpringBoot的一个子项目，拥有使用SpringBoot中管理的依赖的权利，但是还不能直接使用，需要在自己的项目中通过通过<dependencies> 去导入具体的依赖才行，当然version我们可以不用指定了，因为父项目已经维护了verion,除非你要自己指定自己的version。</dependencies></p>
-<p>这里普及一下pom.xml中的 <dependencyManagement>和 <dependencies> 的区别</dependencies></dependencyManagement></p>
+<p>上面有介绍到，这个项目是SpringBoot的父工程，它的作用是帮我们管理了很多的基础jar包，有兴趣的小伙伴可以按住ctrl点进去看一下，在spring-boot-starter-parent中其实还继承了spring-boot-dependencies，在spring-boot-dependencies项目中通过<dependencyManagement>管理了非常多的依赖，同时通过&lt;<properties>维护了这些依赖的version ，总结一下就是SpringBoot的父工程帮我们管理了很多的基础依赖。</p>
+<p>当我们继承了<code>spring-boot-starter-parent</code>就意味着我们成为了SpringBoot的一个子项目，拥有使用SpringBoot中管理的依赖的权利，但是还不能直接使用，需要在自己的项目中通过通过<dependencies> 去导入具体的依赖才行，当然version我们可以不用指定了，因为父项目已经维护了verion,除非你要自己指定自己的version。</p>
+<p>这里普及一下pom.xml中的 <dependencyManagement>和 <dependencies> 的区别</p>
 <ul>
 <li>dependencyManagement ：是用来管理或者说是声明依赖，其中的依赖并不能直接使用，需要在dependencies中显示的导入才可以用</li>
 <li>dependencies：是用来导入依赖，其中的依赖可以直接使用</li>
 </ul>
 <h3 id="2-spring-boot-starter-web"><a href="#2-spring-boot-starter-web" class="headerlink" title="2.spring-boot-starter-web"></a>2.spring-boot-starter-web</h3><p>spring-boot-starter-web这个项目是SpringBoot和SpringMvc整合的jar包，并且导入了日志，tomcat,等等相关的jar包</p>
-<p><img src="/breeze/d872d24.htm/1618364844612-1618372707261.png" alt="1618364844612"></p>
+<p><img src="/./springboot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%B8%80/1618364844612-1618372707261.png" alt="1618364844612"></p>
 <h3 id="3-SpringBootApplication"><a href="#3-SpringBootApplication" class="headerlink" title="3.@SpringBootApplication"></a>3.@SpringBootApplication</h3><p>这个注解是SpringBoot的一个组合注解，一般用来贴在主启动类用，它主要包括三个标签组成</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@SpringBootConfiguration</span></span><br><span class="line"><span class="meta">@EnableAutoConfiguration</span></span><br><span class="line"><span class="meta">@ComponentScan(excludeFilters = &#123;</span></span><br><span class="line"><span class="meta">		@Filter(type = FilterType.CUSTOM, classes = TypeExcludeFilter.class),</span></span><br><span class="line"><span class="meta">		@Filter(type = FilterType.CUSTOM, classes = AutoConfigurationExcludeFilter.class) &#125;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> SpringBootApplication &#123;</span><br></pre></td></tr></table></figure>
 
@@ -1132,7 +1132,7 @@
 <ul>
 <li>2.执行打包命令，使用终端进入项目根目录执行 <code>mvn package</code> ，或者点击：</li>
 </ul>
-<p> <img src="/breeze/d872d24.htm/1568515028409.png" alt="1568515028409"></p>
+<p> <img src="/./springboot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%B8%80/1568515028409.png" alt="1568515028409"></p>
 <ul>
 <li>3.打包命令会把jar打包到<code>target</code>目录，进入该目录，启动项目，运行</li>
 </ul>
@@ -1208,7 +1208,7 @@
 
 <p>@ConfigurationProperties : 自动的根据前缀从配置中过滤出配置项目，然后根据当前对象的列名进行匹配，自动赋值。</p>
 <h4 id="1-6-多环境配置切换【重要】"><a href="#1-6-多环境配置切换【重要】" class="headerlink" title="1.6.多环境配置切换【重要】"></a>1.6.多环境配置切换【重要】</h4><p>一套代码需要部署到不同环境，一套代码不同配置就OK</p>
-<p><img src="/breeze/d872d24.htm/1658389887829.png" alt="1658389887829"></p>
+<p><img src="/./springboot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%B8%80/1658389887829.png" alt="1658389887829"></p>
 <ul>
 <li>方式一：使用单个配置文件实现多环境配置</li>
 </ul>
@@ -1249,7 +1249,7 @@
     <title>测试三</title>
     <url>/breeze/2f4f6d72.html</url>
     <content><![CDATA[<h1 id="css进阶"><a href="#css进阶" class="headerlink" title="css进阶"></a>css进阶</h1><h2 id="1-显示模式"><a href="#1-显示模式" class="headerlink" title="1. 显示模式"></a>1. 显示模式</h2><p>显示模式：标签（元素）的显示方式。 </p>
-<img src="/breeze/2f4f6d72.htm/1680320464551.png" alt="1680320464551" style="width:80%;">
+<img src="./%E6%B5%8B%E8%AF%95%E4%B8%89/1680320464551.png" alt="1680320464551" style="width:80%;" />
 
 <p>作用：布局网页的时候，根据标签的显示模式选择合适的标签摆放内容。 </p>
 <h3 id="1-1-块级元素"><a href="#1-1-块级元素" class="headerlink" title="1.1 块级元素"></a>1.1 块级元素</h3><p>特点：</p>
@@ -1258,7 +1258,7 @@
 <li>宽度默认是父级的100%</li>
 <li>添加宽高属性生效</li>
 </ul>
-<img src="/breeze/2f4f6d72.htm/1680320578369.png" alt="1680320578369" style="width:50%;">
+<img src="./%E6%B5%8B%E8%AF%95%E4%B8%89/1680320578369.png" alt="1680320578369" style="width:50%;" />
 
 <h3 id="1-2-行内元素"><a href="#1-2-行内元素" class="headerlink" title="1.2 行内元素"></a>1.2 行内元素</h3><p>特点：</p>
 <ul>
@@ -1266,7 +1266,7 @@
 <li>设置宽高属性不生效</li>
 <li>宽高尺寸由内容撑开</li>
 </ul>
-<img src="/breeze/2f4f6d72.htm/1680320583985.png" alt="1680320583985" style="width:33%;">
+<img src="./%E6%B5%8B%E8%AF%95%E4%B8%89/1680320583985.png" alt="1680320583985" style="width:33%;" />
 
 <h3 id="1-3-行内块元素"><a href="#1-3-行内块元素" class="headerlink" title="1.3 行内块元素"></a>1.3 行内块元素</h3><p>特点：</p>
 <ul>
@@ -1274,10 +1274,10 @@
 <li>设置宽高属性生效</li>
 <li>宽高尺寸也可以由内容撑开</li>
 </ul>
-<img src="/breeze/2f4f6d72.htm/1680320590005.png" alt="1680320590005" style="width:50%;">
+<img src="./%E6%B5%8B%E8%AF%95%E4%B8%89/1680320590005.png" alt="1680320590005" style="width:50%;" />
 
 <h3 id="1-4-转换显示模式"><a href="#1-4-转换显示模式" class="headerlink" title="1.4 转换显示模式"></a>1.4 转换显示模式</h3><p>属性：<strong>display</strong></p>
-<img src="/breeze/2f4f6d72.htm/1680320613034.png" alt="1680320613034" style="width:50%;">
+<img src="./%E6%B5%8B%E8%AF%95%E4%B8%89/1680320613034.png" alt="1680320613034" style="width:50%;" />
 
 <h2 id="2-盒子模型"><a href="#2-盒子模型" class="headerlink" title="2. 盒子模型"></a>2. 盒子模型</h2><p>作用：布局网页，摆放盒子和内容。</p>
 <h3 id="2-1-盒子模型-组成"><a href="#2-1-盒子模型-组成" class="headerlink" title="2.1 盒子模型-组成"></a>2.1 盒子模型-组成</h3><ul>
@@ -1288,41 +1288,6 @@
 </ul>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">5px</span> solid brown;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">20px</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: pink;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-]]></content>
-  </entry>
-  <entry>
-    <title>测试博客</title>
-    <url>/breeze/d9407122.html</url>
-    <content><![CDATA[<h1 id="css进阶"><a href="#css进阶" class="headerlink" title="css进阶"></a>css进阶</h1><h2 id="1-显示模式"><a href="#1-显示模式" class="headerlink" title="1. 显示模式"></a>1. 显示模式</h2><p>显示模式：标签（元素）的显示方式。 </p>
-<img src="/breeze/d9407122.htm/1680320464551.png" alt="1680320464551" style="width:80%;">
-
-<p>作用：布局网页的时候，根据标签的显示模式选择合适的标签摆放内容。 </p>
-<h3 id="1-1-块级元素"><a href="#1-1-块级元素" class="headerlink" title="1.1 块级元素"></a>1.1 块级元素</h3><p>特点：</p>
-<ul>
-<li>独占一行</li>
-<li>宽度默认是父级的100%</li>
-<li>添加宽高属性生效</li>
-</ul>
-<img src="/breeze/d9407122.htm/1680320578369.png" alt="1680320578369" style="width:50%;">
-
-<h3 id="1-2-行内元素"><a href="#1-2-行内元素" class="headerlink" title="1.2 行内元素"></a>1.2 行内元素</h3><p>特点：</p>
-<ul>
-<li>一行可以显示多个</li>
-<li>设置宽高属性不生效</li>
-<li>宽高尺寸由内容撑开</li>
-</ul>
-<img src="/breeze/d9407122.htm/1680320583985.png" alt="1680320583985" style="width:33%;">
-
-<h3 id="1-3-行内块元素"><a href="#1-3-行内块元素" class="headerlink" title="1.3 行内块元素"></a>1.3 行内块元素</h3><p>特点：</p>
-<ul>
-<li>一行可以显示多个</li>
-<li>设置宽高属性生效</li>
-<li>宽高尺寸也可以由内容撑开</li>
-</ul>
-<img src="/breeze/d9407122.htm/1680320590005.png" alt="1680320590005" style="width:50%;">
-
-<h3 id="1-4-转换显示模式"><a href="#1-4-转换显示模式" class="headerlink" title="1.4 转换显示模式"></a>1.4 转换显示模式</h3><p>属性：<strong>display</strong></p>
-<img src="/breeze/d9407122.htm/1680320613034.png" alt="1680320613034" style="width:50%;">
 ]]></content>
   </entry>
   <entry>
@@ -1344,11 +1309,11 @@
 <li><p>写代码测试编译是有对应的功能</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ronghuanet.domain;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> lombok.*;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*@Getter</span></span><br><span class="line"><span class="comment">@Setter</span></span><br><span class="line"><span class="comment">@ToString</span></span><br><span class="line"><span class="comment">@AllArgsConstructor</span></span><br><span class="line"><span class="comment">@NoArgsConstructor</span></span><br><span class="line"><span class="comment">@EqualsAndHashCode</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">@Data</span> <span class="comment">//就包含@Getter @Setter @ToString @Equals @HashCode</span></span><br><span class="line"><span class="comment">// 在编译的时候是会给你加上对应的功能，但是在idea里面写代码的时候识别不了,</span></span><br><span class="line"><span class="comment">// 需要安装lombok idea插件，让在编码是也能嗲用对于的功能</span></span><br><span class="line"><span class="meta">@AllArgsConstructor</span></span><br><span class="line"><span class="meta">@NoArgsConstructor</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">User</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> Long id;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> Integer age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p><img src="/breeze/3607038d.htm/1658455182137.png" alt="1658455182137"></p>
+<p><img src="/./springboot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%BA%8C/1658455182137.png" alt="1658455182137"></p>
 <p>编码是还是调用不了，需要安装idea lombok插件</p>
 </li>
 <li><p>配置idea lombok插件</p>
-<p><img src="/breeze/3607038d.htm/1658455236057.png" alt="1658455236057"></p>
+<p><img src="/./springboot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%BA%8C/1658455236057.png" alt="1658455236057"></p>
 </li>
 <li><p>调用代码测试</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//通过SpringRunner来运行</span></span><br><span class="line"><span class="meta">@RunWith(SpringRunner.class)</span></span><br><span class="line"><span class="comment">//springboot测试用一个注解就OK,里面要传入入口类</span></span><br><span class="line"><span class="meta">@SpringBootTest(classes = TestAppStart.class)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SpringBootTestTest</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">test</span><span class="params">()</span> <span class="keyword">throws</span> Exception</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">User</span> <span class="variable">user</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">User</span>();</span><br><span class="line">        user.setId(<span class="number">1L</span>);</span><br><span class="line"></span><br><span class="line">        System.out.println(user);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
@@ -1361,7 +1326,7 @@
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ronghuanet.domain;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> lombok.*;</span><br><span class="line"><span class="keyword">import</span> lombok.extern.slf4j.Slf4j;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.Logger;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.LoggerFactory;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*@Getter</span></span><br><span class="line"><span class="comment">@Setter</span></span><br><span class="line"><span class="comment">@ToString</span></span><br><span class="line"><span class="comment">@AllArgsConstructor</span></span><br><span class="line"><span class="comment">@NoArgsConstructor</span></span><br><span class="line"><span class="comment">@EqualsAndHashCode</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">@Data</span> <span class="comment">//就包含@Getter @Setter @ToString @Equals @HashCode</span></span><br><span class="line"><span class="comment">// 在编译的时候是会给你加上对应的功能，但是在idea里面写代码的时候识别不了,</span></span><br><span class="line"><span class="comment">// 需要安装lombok idea插件，让在编码是也能嗲用对于的功能</span></span><br><span class="line"><span class="meta">@AllArgsConstructor</span></span><br><span class="line"><span class="meta">@NoArgsConstructor</span></span><br><span class="line"><span class="meta">@Slf4j</span> <span class="comment">//类似生成private Logger log = LoggerFactory.getLogger(User.class);</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">User</span> &#123;</span><br><span class="line">    <span class="comment">//新建一个日志对象</span></span><br><span class="line"><span class="comment">//    private Logger log = LoggerFactory.getLogger(User.class);</span></span><br><span class="line">    <span class="keyword">private</span> Long id;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> Integer age;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">testLog</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="comment">//级别：debug&lt;info&lt;warn&lt;error  可以在配置文件中配置显示级别，如果配置了，只能显示它或级别比他更高</span></span><br><span class="line">        log.debug(<span class="string">&quot;debug...&quot;</span>);</span><br><span class="line">        log.info(<span class="string">&quot;info...&quot;</span>);</span><br><span class="line">        log.warn(<span class="string">&quot;warn...&quot;</span>);</span><br><span class="line">        log.error(<span class="string">&quot;error...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
 </ol>
 <h2 id="三-springboot-web开发-springmvc"><a href="#三-springboot-web开发-springmvc" class="headerlink" title="三 springboot web开发-springmvc"></a>三 springboot web开发-springmvc</h2><p>​	所谓的springbootweb开发，其实就是以springboot方式（导入对应starter）来使用springmvc，这样就不需要像原来一样做大量的配置了。并且原来springmvc功能在springboot也有.</p>
-<p><img src="/breeze/3607038d.htm/1658458434835.png" alt="1658458434835"></p>
+<p><img src="/./springboot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%BA%8C/1658458434835.png" alt="1658458434835"></p>
 <h3 id="1-响应界面-thymeleaf"><a href="#1-响应界面-thymeleaf" class="headerlink" title="1 响应界面-thymeleaf"></a>1 响应界面-thymeleaf</h3><h4 id="1-1-界面模板选型"><a href="#1-1-界面模板选型" class="headerlink" title="1.1 界面模板选型"></a>1.1 界面模板选型</h4><p>​     原来我们可以通过jsp来展示页面，其实在springbootweb中不仅支持jsp,还支持freemarker,velocity,thymeleaf等模板语言。  所谓模板就是一个基本结构，到时候往结构中放入数据就得到页面。  并且springboot推荐使用<strong>Thymeleaf</strong>,以后如果我们需要在springboot写界面建议使用Thymeleaf，而不用jsp了。</p>
 <h4 id="1-2-Thymeleaf入门"><a href="#1-2-Thymeleaf入门" class="headerlink" title="1.2 Thymeleaf入门"></a>1.2 <strong>Thymeleaf</strong>入门</h4><ol>
 <li><p>导入jar</p>
@@ -1378,7 +1343,7 @@
 
 </li>
 <li><p>Thymeleaf基本语法说明</p>
-<p><img src="/breeze/3607038d.htm/1658459163125.png" alt="1658459163125"></p>
+<p><img src="/./springboot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%BA%8C/1658459163125.png" alt="1658459163125"></p>
 </li>
 </ol>
 <h4 id="1-3-Thymeleaf的自动配置原理【扩展】"><a href="#1-3-Thymeleaf的自动配置原理【扩展】" class="headerlink" title="1.3  Thymeleaf的自动配置原理【扩展】"></a>1.3  Thymeleaf的自动配置原理【扩展】</h4><p>​      刚才我在返回界面的时候，我直接返回一个”hello”,它凭什么能够找到&#x2F;templates&#x2F;hello.html呢？那是因为springboot给我自动配置了ViewResoler，具体在哪儿配置的呢？</p>
@@ -1389,7 +1354,7 @@
 <li><p>默认首页: 在默认的springMVC自动配置下，会加载静态资源文件夹下的index.html文件作为项目首页。springBoot默认的静态资源路径有五个，按照优先级分别是项目的根路径 &#x2F;，classpath:&#x2F;META-INF&#x2F;resources&#x2F;，classpath:&#x2F;resources&#x2F;，classpath:&#x2F;static&#x2F;，classpath:&#x2F;public&#x2F;，优先级同显示顺序 。</p>
 </li>
 <li><p>网页图标: 默认是开启的，默认把src&#x2F;main&#x2F;resources&#x2F;static&#x2F;favicon.ico 作为网页图标，可以在application.yml中设置关闭Favicon</p>
-<p><img src="/breeze/3607038d.htm/1658460356674.png" alt="1658460356674"></p>
+<p><img src="/./springboot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%BA%8C/1658460356674.png" alt="1658460356674"></p>
 </li>
 </ul>
 <h3 id="2-响应json数据和页面"><a href="#2-响应json数据和页面" class="headerlink" title="2.响应json数据和页面"></a>2.响应json数据和页面</h3><h4 id="2-1-Controller-ResponseBody"><a href="#2-1-Controller-ResponseBody" class="headerlink" title="2.1 Controller+ResponseBody"></a>2.1 Controller+ResponseBody</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ronghuanet.controller;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.ronghuanet.domain.User;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Controller;</span><br><span class="line"><span class="keyword">import</span> org.springframework.ui.Model;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.ResponseBody;</span><br><span class="line"></span><br><span class="line"><span class="comment">//一个Controller，有多个方法，有的方法需要响应界面，有的方法需要响应json</span></span><br><span class="line"><span class="comment">/*方案1：Controller</span></span><br><span class="line"><span class="comment">   1)响应页面，直接返回字符串</span></span><br><span class="line"><span class="comment">   2）响应json，直接返回对象并且加上@ResponseBody注解</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line"><span class="meta">@Controller</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/viewAndJson01&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ViewAndJson01Controller</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//响应界面</span></span><br><span class="line">    <span class="meta">@RequestMapping(&quot;/view&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">hello</span><span class="params">(Model model)</span>&#123;</span><br><span class="line">        model.addAttribute(<span class="string">&quot;msg&quot;</span>, <span class="string">&quot;你是个沙雕！&quot;</span>);</span><br><span class="line">        model.addAttribute(<span class="string">&quot;user&quot;</span>, <span class="keyword">new</span> <span class="title class_">User</span>(<span class="number">1L</span>, <span class="string">&quot;zs&quot;</span>, <span class="number">18</span>));</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;hello&quot;</span>;  <span class="comment">// /template/hello.html</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//响应jsong</span></span><br><span class="line">    <span class="meta">@RequestMapping(&quot;/json&quot;)</span></span><br><span class="line">    <span class="meta">@ResponseBody</span></span><br><span class="line">    <span class="keyword">public</span>  User <span class="title function_">jsonData</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">User</span>(<span class="number">1L</span>, <span class="string">&quot;zs&quot;</span>, <span class="number">18</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -1469,7 +1434,7 @@
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">UserMapper</span> &#123;</span><br><span class="line">    User <span class="title function_">loadById</span><span class="params">(Long id)</span>;<span class="comment">//基本测试</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">remove</span><span class="params">(Long id)</span>;<span class="comment">//做事务测试</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Mapepr.xml</p>
-<p><img src="/breeze/3607038d.htm/1658472225754.png" alt="1658472225754"></p>
+<p><img src="/./springboot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%BA%8C/1658472225754.png" alt="1658472225754"></p>
 <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span> ?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">mapper</span> <span class="keyword">PUBLIC</span> <span class="string">&quot;-//mybatis.org//DTD Mapper 3.0//EN&quot;</span></span></span><br><span class="line"><span class="meta">        <span class="string">&quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--namespace就是映射接口全限定名--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mapper</span> <span class="attr">namespace</span>=<span class="string">&quot;com.ronghuanet.mapper.UserMapper&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">delete</span> <span class="attr">id</span>=<span class="string">&quot;remove&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;long&quot;</span>&gt;</span></span><br><span class="line">        delete from t_user where id = #&#123;id&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">delete</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;loadById&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;User&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;long&quot;</span>&gt;</span></span><br><span class="line">        select * from t_user where id = #&#123;id&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mapper</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 
@@ -1480,7 +1445,7 @@
 <h3 id="2-Mapper多模块开发"><a href="#2-Mapper多模块开发" class="headerlink" title="2 Mapper多模块开发"></a>2 Mapper多模块开发</h3><p>​	一个项目中，分成多个模块，方便管理。比如下面分成系统管理、用户管理两个模块</p>
 <ol>
 <li><p>拷贝单模块代码并改造结构</p>
-<p><img src="/breeze/3607038d.htm/1658473062104.png" alt="1658473062104"></p>
+<p><img src="/./springboot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%BA%8C/1658473062104.png" alt="1658473062104"></p>
 </li>
 <li><p>调整配置</p>
 <p>别名包</p>
@@ -1507,7 +1472,7 @@
 </ol>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="meta">@Transactional(readOnly = true,propagation = Propagation.SUPPORTS)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">UserServiceImpl</span> <span class="keyword">implements</span> <span class="title class_">IUserService</span> &#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> UserMapper userMapper;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//增删改要配置写事务</span></span><br><span class="line">    <span class="meta">@Transactional</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">deleteById</span><span class="params">(Long id)</span> &#123;</span><br><span class="line">        userMapper.remove(id);</span><br><span class="line">        <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>/<span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//使用类上配置的事务</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> User <span class="title function_">getById</span><span class="params">(Long id)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> userMapper.loadById(id);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id><a href="#" class="headerlink" title></a></h2>]]></content>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
       <categories>
         <category>java</category>
         <category>springboot</category>
@@ -1518,10 +1483,10 @@
       </tags>
   </entry>
   <entry>
-    <title>测试博客二</title>
-    <url>/breeze/d0bfb327.html</url>
+    <title>测试博客</title>
+    <url>/breeze/d9407122.html</url>
     <content><![CDATA[<h1 id="css进阶"><a href="#css进阶" class="headerlink" title="css进阶"></a>css进阶</h1><h2 id="1-显示模式"><a href="#1-显示模式" class="headerlink" title="1. 显示模式"></a>1. 显示模式</h2><p>显示模式：标签（元素）的显示方式。 </p>
-<img src="/breeze/d0bfb327.htm/1680320464551.png" alt="1680320464551" style="width:80%;">
+<img src="./%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2/1680320464551.png" alt="1680320464551" style="width:80%;" />
 
 <p>作用：布局网页的时候，根据标签的显示模式选择合适的标签摆放内容。 </p>
 <h3 id="1-1-块级元素"><a href="#1-1-块级元素" class="headerlink" title="1.1 块级元素"></a>1.1 块级元素</h3><p>特点：</p>
@@ -1530,7 +1495,7 @@
 <li>宽度默认是父级的100%</li>
 <li>添加宽高属性生效</li>
 </ul>
-<img src="/breeze/d0bfb327.htm/1680320578369.png" alt="1680320578369" style="width:50%;">
+<img src="./%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2/1680320578369.png" alt="1680320578369" style="width:50%;" />
 
 <h3 id="1-2-行内元素"><a href="#1-2-行内元素" class="headerlink" title="1.2 行内元素"></a>1.2 行内元素</h3><p>特点：</p>
 <ul>
@@ -1538,7 +1503,7 @@
 <li>设置宽高属性不生效</li>
 <li>宽高尺寸由内容撑开</li>
 </ul>
-<img src="/breeze/d0bfb327.htm/1680320583985.png" alt="1680320583985" style="width:33%;">
+<img src="./%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2/1680320583985.png" alt="1680320583985" style="width:33%;" />
 
 <h3 id="1-3-行内块元素"><a href="#1-3-行内块元素" class="headerlink" title="1.3 行内块元素"></a>1.3 行内块元素</h3><p>特点：</p>
 <ul>
@@ -1546,10 +1511,45 @@
 <li>设置宽高属性生效</li>
 <li>宽高尺寸也可以由内容撑开</li>
 </ul>
-<img src="/breeze/d0bfb327.htm/1680320590005.png" alt="1680320590005" style="width:50%;">
+<img src="./%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2/1680320590005.png" alt="1680320590005" style="width:50%;" />
 
 <h3 id="1-4-转换显示模式"><a href="#1-4-转换显示模式" class="headerlink" title="1.4 转换显示模式"></a>1.4 转换显示模式</h3><p>属性：<strong>display</strong></p>
-<img src="/breeze/d0bfb327.htm/1680320613034.png" alt="1680320613034" style="width:50%;">
+<img src="./%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2/1680320613034.png" alt="1680320613034" style="width:50%;" />
+]]></content>
+  </entry>
+  <entry>
+    <title>测试博客二</title>
+    <url>/breeze/d0bfb327.html</url>
+    <content><![CDATA[<h1 id="css进阶"><a href="#css进阶" class="headerlink" title="css进阶"></a>css进阶</h1><h2 id="1-显示模式"><a href="#1-显示模式" class="headerlink" title="1. 显示模式"></a>1. 显示模式</h2><p>显示模式：标签（元素）的显示方式。 </p>
+<img src="./%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2%E4%BA%8C/1680320464551.png" alt="1680320464551" style="width:80%;" />
+
+<p>作用：布局网页的时候，根据标签的显示模式选择合适的标签摆放内容。 </p>
+<h3 id="1-1-块级元素"><a href="#1-1-块级元素" class="headerlink" title="1.1 块级元素"></a>1.1 块级元素</h3><p>特点：</p>
+<ul>
+<li>独占一行</li>
+<li>宽度默认是父级的100%</li>
+<li>添加宽高属性生效</li>
+</ul>
+<img src="./%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2%E4%BA%8C/1680320578369.png" alt="1680320578369" style="width:50%;" />
+
+<h3 id="1-2-行内元素"><a href="#1-2-行内元素" class="headerlink" title="1.2 行内元素"></a>1.2 行内元素</h3><p>特点：</p>
+<ul>
+<li>一行可以显示多个</li>
+<li>设置宽高属性不生效</li>
+<li>宽高尺寸由内容撑开</li>
+</ul>
+<img src="./%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2%E4%BA%8C/1680320583985.png" alt="1680320583985" style="width:33%;" />
+
+<h3 id="1-3-行内块元素"><a href="#1-3-行内块元素" class="headerlink" title="1.3 行内块元素"></a>1.3 行内块元素</h3><p>特点：</p>
+<ul>
+<li>一行可以显示多个</li>
+<li>设置宽高属性生效</li>
+<li>宽高尺寸也可以由内容撑开</li>
+</ul>
+<img src="./%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2%E4%BA%8C/1680320590005.png" alt="1680320590005" style="width:50%;" />
+
+<h3 id="1-4-转换显示模式"><a href="#1-4-转换显示模式" class="headerlink" title="1.4 转换显示模式"></a>1.4 转换显示模式</h3><p>属性：<strong>display</strong></p>
+<img src="./%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2%E4%BA%8C/1680320613034.png" alt="1680320613034" style="width:50%;" />
 ]]></content>
   </entry>
 </search>
