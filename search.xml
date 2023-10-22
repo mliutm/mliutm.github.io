@@ -1,89 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>for和forEach的区别和使用</title>
-    <url>/breeze/a197ec68.html</url>
-    <content><![CDATA[<h2 id="for与foreach的区别"><a href="#for与foreach的区别" class="headerlink" title="for与foreach的区别"></a>for与foreach的区别</h2><p>遍历元素<br>删除元素<br>修改元素<br>foreach修改元素属性<br>总结</p>
-<h3 id="1-使用forEach遍历元素"><a href="#1-使用forEach遍历元素" class="headerlink" title="1. 使用forEach遍历元素"></a>1. 使用forEach遍历元素</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String[] array = &#123;<span class="string">&quot;1&quot;</span>, <span class="string">&quot;2&quot;</span>, <span class="string">&quot;3&quot;</span>&#125;;</span><br><span class="line"><span class="keyword">for</span> (String i : array) &#123;</span><br><span class="line">    System.out.println(i);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*============================*/</span></span><br><span class="line">ArrayList&lt;String&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">list.add(<span class="string">&quot;111&quot;</span>);</span><br><span class="line">list.add(<span class="string">&quot;222&quot;</span>);</span><br><span class="line">list.add(<span class="string">&quot;333&quot;</span>);</span><br><span class="line"><span class="keyword">for</span> (String i : list) &#123;</span><br><span class="line">    System.out.println(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>遍历后结果如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line">    </span><br><span class="line"><span class="number">111</span></span><br><span class="line"><span class="number">222</span></span><br><span class="line"><span class="number">333</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p>我们再来看看编译后的源码（idea自带，在target包里打开你的类源码文件即可）：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">	String[] array = <span class="keyword">new</span> <span class="title class_">String</span>[]&#123;<span class="string">&quot;1&quot;</span>, <span class="string">&quot;2&quot;</span>, <span class="string">&quot;3&quot;</span>&#125;;</span><br><span class="line">    String[] var2 = array;</span><br><span class="line">    <span class="type">int</span> <span class="variable">var3</span> <span class="operator">=</span> array.length;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">var4</span> <span class="operator">=</span> <span class="number">0</span>; var4 &lt; var3; ++var4) &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">i</span> <span class="operator">=</span> var2[var4];</span><br><span class="line">        System.out.println(i);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*===========================================*/</span></span><br><span class="line"></span><br><span class="line">    ArrayList&lt;String&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span>();</span><br><span class="line">    list.add(<span class="string">&quot;111&quot;</span>);</span><br><span class="line">    list.add(<span class="string">&quot;222&quot;</span>);</span><br><span class="line">    list.add(<span class="string">&quot;333&quot;</span>);</span><br><span class="line">    <span class="type">Iterator</span> <span class="variable">var7</span> <span class="operator">=</span> list.iterator();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(var7.hasNext()) &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">i</span> <span class="operator">=</span> (String)var7.next();</span><br><span class="line">        System.out.println(i);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-
-<p><strong>可见，遍历数组使用的是原始for循环，集合的话使用的是Iterator迭代器。</strong></p>
-<h3 id="2-删除元素"><a href="#2-删除元素" class="headerlink" title="2. 删除元素"></a>2. 删除元素</h3><h4 id="使用for循环："><a href="#使用for循环：" class="headerlink" title="使用for循环："></a>使用for循环：</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">ArrayList&lt;String&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">list.add(<span class="string">&quot;111&quot;</span>);</span><br><span class="line">list.add(<span class="string">&quot;222&quot;</span>);</span><br><span class="line">list.add(<span class="string">&quot;333&quot;</span>);</span><br><span class="line">log.info(list.toString());</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt;list.size(); i++) &#123;</span><br><span class="line">    list.remove(<span class="string">&quot;222&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">log.info(list.toString());</span><br></pre></td></tr></table></figure>
-
-<p>结果：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="number">11</span>:<span class="number">11</span>:<span class="number">52.532</span> [main] INFO com.mliutm.test.ForTest - [<span class="number">111</span>, <span class="number">222</span>, <span class="number">333</span>]</span><br><span class="line"><span class="number">11</span>:<span class="number">11</span>:<span class="number">52.539</span> [main] INFO com.mliutm.test.ForTest - [<span class="number">111</span>, <span class="number">333</span>]</span><br></pre></td></tr></table></figure>
-
-<p><strong>在使用for循环遍历集合的过程中，移除部分元素，集合仍然遍历成功</strong></p>
-<h4 id="使用foreach："><a href="#使用foreach：" class="headerlink" title="使用foreach："></a>使用foreach：</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">ArrayList&lt;String&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">list.add(<span class="string">&quot;111&quot;</span>);</span><br><span class="line">list.add(<span class="string">&quot;222&quot;</span>);</span><br><span class="line">list.add(<span class="string">&quot;333&quot;</span>);</span><br><span class="line">log.info(list.toString());</span><br><span class="line"><span class="keyword">for</span> (String i : list) &#123;</span><br><span class="line">    list.remove(<span class="string">&quot;222&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line">log.info(list.toString());</span><br></pre></td></tr></table></figure>
-
-<p>结果：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="number">11</span>:<span class="number">50</span>:<span class="number">48.333</span> [main] INFO com.mliutm.test.ForEachTest - [<span class="number">111</span>, <span class="number">222</span>, <span class="number">333</span>]</span><br><span class="line">    Exception in thread <span class="string">&quot;main&quot;</span> java.util.ConcurrentModificationException</span><br><span class="line">    at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:<span class="number">909</span>)</span><br><span class="line">    at java.util.ArrayList$Itr.next(ArrayList.java:<span class="number">859</span>)</span><br><span class="line">    at com.xiaolinge.com.hello.HelloWord.main(HelloWord.java:<span class="number">30</span>)</span><br></pre></td></tr></table></figure>
-
-
-<p>显然出现了异常，原因如下：</p>
-<blockquote>
-<p>迭代器内部的每次遍历都会记录List内部的modcount当做预期值，然后在每次循环中用预期值与List的成员变量modCount作比较，但是普通list.remove调用的是List的remove，这时modcount++，但是iterator内记录的预期值&#x3D;并没有变化，所以会报错。<br>如果想要删除元素的话需要使用迭代器内部的remove方法：</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">ArrayList&lt;String&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">list.add(<span class="string">&quot;111&quot;</span>);</span><br><span class="line">list.add(<span class="string">&quot;222&quot;</span>);</span><br><span class="line">list.add(<span class="string">&quot;333&quot;</span>);</span><br><span class="line">log.info(list.toString());</span><br><span class="line">Iterator&lt;String&gt; it = list.iterator();</span><br><span class="line"><span class="keyword">while</span> (it.hasNext())&#123;</span><br><span class="line">    <span class="type">String</span> <span class="variable">next</span> <span class="operator">=</span> it.next();</span><br><span class="line">    <span class="comment">//if外使用list的remove方法还是会报错的</span></span><br><span class="line">    <span class="keyword">if</span>(next.equals(<span class="string">&quot;222&quot;</span>))&#123;</span><br><span class="line">        it.remove();<span class="comment">//这里使用的是迭代器里面的remove（）方法，</span></span><br><span class="line">        <span class="comment">// 当然如果使用list的remove方法在此删除质地感元素的话是成功的，比如：list.remove(&quot;222&quot;)</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">log.info(list.toString());</span><br></pre></td></tr></table></figure>
-
-<p>结果：</p>
-<p>12:06:14.042 [main] INFO com.xiaolinge.com.hello.HelloWord - [111, 222, 333]<br>12:06:14.046 [main] INFO com.xiaolinge.com.hello.HelloWord - [111, 333]<br>1<br>2<br>（3）修改元素<br>使用原始for：</p>
-<pre><code>    ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();
-    list.add(&quot;111&quot;);
-    list.add(&quot;222&quot;);
-    list.add(&quot;333&quot;);
-    log.info(list.toString());
-    for (int i = 0; i &lt;list.size(); i++) &#123;
-        list.set(i,&quot;444&quot;);
-    &#125;
-     log.info(list.toString());
-</code></pre>
-<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>结果：</p>
-<p>12:12:56.910 [main] INFO com.xiaolinge.com.hello.HelloWord - [111, 222, 333]<br>12:12:56.915 [main] INFO com.xiaolinge.com.hello.HelloWord - [444, 444, 444]<br>1<br>2<br>哦的k！可以修改元素；<br>使用foreach：</p>
-<pre><code>    ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();
-    list.add(&quot;111&quot;);
-    list.add(&quot;222&quot;);
-    list.add(&quot;333&quot;);
-    log.info(list.toString());
-   for (String i : list) &#123;
-        i=&quot;444&quot;;
-    &#125;
-     log.info(list.toString());		
-</code></pre>
-<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>结果：</p>
-<p>12:34:47.207 [main] INFO com.xiaolinge.com.hello.HelloWord - [111, 222, 333]<br>12:34:47.211 [main] INFO com.xiaolinge.com.hello.HelloWord - [111, 222, 333]<br>1<br>2<br>看到咯，不行的哦。<br>辣么，修改元素不行，修改元素的属性可不可以呢？让我们来看下吧。</p>
-<p>（4）foreach修改元素属性<br>（for就不测试了）<br>创建一个学生类：</p>
-<p>public class Student {<br>        private int age;<br>        public int getAge() {<br>            return age;<br>        }<br>        public void setAge(int age) {<br>            this.age &#x3D; age;<br>        }<br>        public String getName() {<br>            return name;<br>        }<br>        public void setName(String name) {<br>            this.name &#x3D; name;<br>        }<br>        private String name;<br>        public Student(){};<br>        public Student(int age,String name){<br>            this.age&#x3D;age;<br>            this.name&#x3D;name;<br>        }<br>    } </p>
-<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>哦的k，接下来测试代码：</p>
-<pre><code>Student student=new Student(1,&quot;huge&quot;);
-    Student student1=new Student(1,&quot;xiaoyao&quot;);
-    List&lt;Student&gt; studentList=new ArrayList&lt;Student&gt;();
-    studentList.add(student);
-    studentList.add(student1);
-    System.out.println(student.getName());
-    System.out.println(student1.getName());
-    for(Student stu:studentList)
-    &#123;
-        stu.setName(&quot;jingtian&quot;);
-    &#125;
-    System.out.println(student.getName());
-    System.out.println(student1.getName());
-</code></pre>
-<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>结果：</p>
-<p>huge<br>xiaoyao<br>jingtian<br>jingtian<br>1<br>2<br>3<br>4<br>484很神奇！修改不了对象，却可以修改对象的属性。</p>
-<p>总结<br>1、for与foreach都可以遍历数组&#x2F;集合，不过for则在较复杂的循环中效率更高。<br>2、foreach不可以删除&#x2F;修改集合元素，而for可以<br>3、foreach和for都可以修改元素里面的属性<br>所以相比较下来for循环更为灵活。</p>
-<p>参考链接：<a href="https://blog.csdn.net/qq_40521656/article/details/90749927">coder小林哥</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/breeze/4a17b156.html</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -100,11 +17,6 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>知识杂谈</title>
-    <url>/breeze/558fa028.html</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>html入门</title>
@@ -316,6 +228,97 @@
       <tags>
         <tag>html</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>for和forEach的区别和使用</title>
+    <url>/breeze/a197ec68.html</url>
+    <content><![CDATA[<h2 id="for与foreach的区别"><a href="#for与foreach的区别" class="headerlink" title="for与foreach的区别"></a>for与foreach的区别</h2><p>遍历元素<br>删除元素<br>修改元素<br>foreach修改元素属性<br>总结</p>
+<h3 id="1-使用forEach遍历元素"><a href="#1-使用forEach遍历元素" class="headerlink" title="1. 使用forEach遍历元素"></a>1. 使用forEach遍历元素</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String[] array = &#123;<span class="string">&quot;1&quot;</span>, <span class="string">&quot;2&quot;</span>, <span class="string">&quot;3&quot;</span>&#125;;</span><br><span class="line"><span class="keyword">for</span> (String i : array) &#123;</span><br><span class="line">    System.out.println(i);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*============================*/</span></span><br><span class="line">ArrayList&lt;String&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">list.add(<span class="string">&quot;111&quot;</span>);</span><br><span class="line">list.add(<span class="string">&quot;222&quot;</span>);</span><br><span class="line">list.add(<span class="string">&quot;333&quot;</span>);</span><br><span class="line"><span class="keyword">for</span> (String i : list) &#123;</span><br><span class="line">    System.out.println(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>遍历后结果如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line">    </span><br><span class="line"><span class="number">111</span></span><br><span class="line"><span class="number">222</span></span><br><span class="line"><span class="number">333</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>我们再来看看编译后的源码（idea自带，在target包里打开你的类源码文件即可）：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">	String[] array = <span class="keyword">new</span> <span class="title class_">String</span>[]&#123;<span class="string">&quot;1&quot;</span>, <span class="string">&quot;2&quot;</span>, <span class="string">&quot;3&quot;</span>&#125;;</span><br><span class="line">    String[] var2 = array;</span><br><span class="line">    <span class="type">int</span> <span class="variable">var3</span> <span class="operator">=</span> array.length;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">var4</span> <span class="operator">=</span> <span class="number">0</span>; var4 &lt; var3; ++var4) &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">i</span> <span class="operator">=</span> var2[var4];</span><br><span class="line">        System.out.println(i);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*===========================================*/</span></span><br><span class="line"></span><br><span class="line">    ArrayList&lt;String&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span>();</span><br><span class="line">    list.add(<span class="string">&quot;111&quot;</span>);</span><br><span class="line">    list.add(<span class="string">&quot;222&quot;</span>);</span><br><span class="line">    list.add(<span class="string">&quot;333&quot;</span>);</span><br><span class="line">    <span class="type">Iterator</span> <span class="variable">var7</span> <span class="operator">=</span> list.iterator();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(var7.hasNext()) &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">i</span> <span class="operator">=</span> (String)var7.next();</span><br><span class="line">        System.out.println(i);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+<p><strong>可见，遍历数组使用的是原始for循环，集合的话使用的是Iterator迭代器。</strong></p>
+<h3 id="2-删除元素"><a href="#2-删除元素" class="headerlink" title="2. 删除元素"></a>2. 删除元素</h3><h4 id="使用for循环："><a href="#使用for循环：" class="headerlink" title="使用for循环："></a>使用for循环：</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">ArrayList&lt;String&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">list.add(<span class="string">&quot;111&quot;</span>);</span><br><span class="line">list.add(<span class="string">&quot;222&quot;</span>);</span><br><span class="line">list.add(<span class="string">&quot;333&quot;</span>);</span><br><span class="line">log.info(list.toString());</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt;list.size(); i++) &#123;</span><br><span class="line">    list.remove(<span class="string">&quot;222&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">log.info(list.toString());</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="number">11</span>:<span class="number">11</span>:<span class="number">52.532</span> [main] INFO com.mliutm.test.ForTest - [<span class="number">111</span>, <span class="number">222</span>, <span class="number">333</span>]</span><br><span class="line"><span class="number">11</span>:<span class="number">11</span>:<span class="number">52.539</span> [main] INFO com.mliutm.test.ForTest - [<span class="number">111</span>, <span class="number">333</span>]</span><br></pre></td></tr></table></figure>
+
+<p><strong>在使用for循环遍历集合的过程中，移除部分元素，集合仍然遍历成功</strong></p>
+<h4 id="使用foreach："><a href="#使用foreach：" class="headerlink" title="使用foreach："></a>使用foreach：</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">ArrayList&lt;String&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">list.add(<span class="string">&quot;111&quot;</span>);</span><br><span class="line">list.add(<span class="string">&quot;222&quot;</span>);</span><br><span class="line">list.add(<span class="string">&quot;333&quot;</span>);</span><br><span class="line">log.info(list.toString());</span><br><span class="line"><span class="keyword">for</span> (String i : list) &#123;</span><br><span class="line">    list.remove(<span class="string">&quot;222&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line">log.info(list.toString());</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="number">11</span>:<span class="number">50</span>:<span class="number">48.333</span> [main] INFO com.mliutm.test.ForEachTest - [<span class="number">111</span>, <span class="number">222</span>, <span class="number">333</span>]</span><br><span class="line">    Exception in thread <span class="string">&quot;main&quot;</span> java.util.ConcurrentModificationException</span><br><span class="line">    at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:<span class="number">909</span>)</span><br><span class="line">    at java.util.ArrayList$Itr.next(ArrayList.java:<span class="number">859</span>)</span><br><span class="line">    at com.xiaolinge.com.hello.HelloWord.main(HelloWord.java:<span class="number">30</span>)</span><br></pre></td></tr></table></figure>
+
+
+<p>显然出现了异常，原因如下：</p>
+<blockquote>
+<p>迭代器内部的每次遍历都会记录List内部的modcount当做预期值，然后在每次循环中用预期值与List的成员变量modCount作比较，但是普通list.remove调用的是List的remove，这时modcount++，但是iterator内记录的预期值&#x3D;并没有变化，所以会报错。<br>如果想要删除元素的话需要使用迭代器内部的remove方法：</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">ArrayList&lt;String&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">list.add(<span class="string">&quot;111&quot;</span>);</span><br><span class="line">list.add(<span class="string">&quot;222&quot;</span>);</span><br><span class="line">list.add(<span class="string">&quot;333&quot;</span>);</span><br><span class="line">log.info(list.toString());</span><br><span class="line">Iterator&lt;String&gt; it = list.iterator();</span><br><span class="line"><span class="keyword">while</span> (it.hasNext())&#123;</span><br><span class="line">    <span class="type">String</span> <span class="variable">next</span> <span class="operator">=</span> it.next();</span><br><span class="line">    <span class="comment">//if外使用list的remove方法还是会报错的</span></span><br><span class="line">    <span class="keyword">if</span>(next.equals(<span class="string">&quot;222&quot;</span>))&#123;</span><br><span class="line">        it.remove();<span class="comment">//这里使用的是迭代器里面的remove（）方法，</span></span><br><span class="line">        <span class="comment">// 当然如果使用list的remove方法在此删除质地感元素的话是成功的，比如：list.remove(&quot;222&quot;)</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">log.info(list.toString());</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">[<span class="number">111</span>, <span class="number">222</span>, <span class="number">333</span>]</span><br><span class="line">[<span class="number">111</span>, <span class="number">333</span>]</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-修改元素"><a href="#3-修改元素" class="headerlink" title="3. 修改元素"></a>3. 修改元素</h3><h4 id="使用原始for："><a href="#使用原始for：" class="headerlink" title="使用原始for："></a>使用原始for：</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">ArrayList&lt;String&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">list.add(<span class="string">&quot;111&quot;</span>);</span><br><span class="line">list.add(<span class="string">&quot;222&quot;</span>);</span><br><span class="line">list.add(<span class="string">&quot;333&quot;</span>);</span><br><span class="line">log.info(list.toString());</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt;list.size(); i++) &#123;</span><br><span class="line">    list.set(i,<span class="string">&quot;444&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line">log.info(list.toString());</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">[<span class="number">111</span>, <span class="number">222</span>, <span class="number">333</span>]</span><br><span class="line">[<span class="number">444</span>, <span class="number">444</span>, <span class="number">444</span>]</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>经测试，使用<code>for</code>循环，能正常修改集合中的元素内容</p>
+</blockquote>
+<h4 id="使用foreach：-1"><a href="#使用foreach：-1" class="headerlink" title="使用foreach："></a>使用foreach：</h4><h5 id="测试修改元素的内容："><a href="#测试修改元素的内容：" class="headerlink" title="测试修改元素的内容："></a>测试修改元素的内容：</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">ArrayList&lt;String&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">list.add(<span class="string">&quot;111&quot;</span>);</span><br><span class="line">list.add(<span class="string">&quot;222&quot;</span>);</span><br><span class="line">list.add(<span class="string">&quot;333&quot;</span>);</span><br><span class="line">log.info(list.toString());</span><br><span class="line"><span class="keyword">for</span> (String i : list) &#123;</span><br><span class="line">    i=<span class="string">&quot;444&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line">log.info(list.toString());		</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">[<span class="number">111</span>, <span class="number">222</span>, <span class="number">333</span>]</span><br><span class="line">[<span class="number">111</span>, <span class="number">222</span>, <span class="number">333</span>]</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>经测试，使用<code>forEach</code>不能修改元素的内容</p>
+</blockquote>
+<h5 id="测试修改元素的属性："><a href="#测试修改元素的属性：" class="headerlink" title="测试修改元素的属性："></a>测试修改元素的属性：</h5><p>创建一个学生类：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Student</span> &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> age;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getAge</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setAge</span><span class="params">(<span class="type">int</span> age)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getName</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setName</span><span class="params">(String name)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Student</span><span class="params">()</span>&#123;&#125;;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Student</span><span class="params">(<span class="type">int</span> age,String name)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.age=age;</span><br><span class="line">        <span class="built_in">this</span>.name=name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+
+<p>哦的k，接下来测试代码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    Student student=<span class="keyword">new</span> <span class="title class_">Student</span>(<span class="number">1</span>,<span class="string">&quot;张三&quot;</span>);</span><br><span class="line">    Student student1=<span class="keyword">new</span> <span class="title class_">Student</span>(<span class="number">1</span>,<span class="string">&quot;李四&quot;</span>);</span><br><span class="line">    List&lt;Student&gt; studentList=<span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;Student&gt;();</span><br><span class="line">    studentList.add(student);</span><br><span class="line">    studentList.add(student1);</span><br><span class="line">    System.out.println(student.getName());</span><br><span class="line">    System.out.println(student1.getName());</span><br><span class="line">    <span class="keyword">for</span>(Student stu:studentList)&#123;</span><br><span class="line">        stu.setName(<span class="string">&quot;王五&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(student.getName());</span><br><span class="line">    System.out.println(student1.getName());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">huge</span></span><br><span class="line"><span class="attribute">xiaoyao </span></span><br><span class="line"><span class="attribute"></span></span><br><span class="line"><span class="attribute">jingtian</span></span><br><span class="line"><span class="attribute">jingtian</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>经测试，使用<code>forEach</code>修改不了对象，却可以修改对象的属性。</p>
+</blockquote>
+<h3 id="4-总结"><a href="#4-总结" class="headerlink" title="4. 总结"></a>4. 总结</h3><h4 id="4-1-for循环和forEach循环的区别"><a href="#4-1-for循环和forEach循环的区别" class="headerlink" title="4.1 for循环和forEach循环的区别"></a>4.1 <code>for</code>循环和<code>forEach</code>循环的区别</h4><ol>
+<li>语法形式：<code>for</code>循环使用传统的迭代方式，通过初始化、条件判断和自增&#x2F;自减来控制循环。而<code>forEach</code>循环是一种简化的循环结构，直接遍历集合或数组中的每个元素。</li>
+<li>遍历方式：<code>for</code>循环可以通过索引或条件进行元素的访问和操作，可以按照需要自由控制迭代过程。<code>forEach</code>循环则自动遍历集合或数组中的每个元素，无需显式的索引控制。</li>
+<li>控制流程：<code>for</code>循环可以通过<code>break</code>和<code>continue</code>语句控制流程，提前结束循环或跳过某次迭代。<code>forEach</code>循环无法使用这些语句，只能通过抛出异常或使用<code>return</code>来实现类似的功能。</li>
+<li><strong>foreach不可以删除&#x2F;修改集合元素，而for可以</strong>。</li>
+<li><strong>foreach和for都可以修改元素里面的属性。</strong></li>
+</ol>
+<h4 id="4-2-适用场景"><a href="#4-2-适用场景" class="headerlink" title="4.2 适用场景"></a>4.2 适用场景</h4><ol>
+<li>当需要根据索引或条件对集合或数组进行灵活的迭代和操作时，应选择使用<code>for</code>循环。例如，需要按照指定的顺序访问元素，或需要在循环内部进行复杂的逻辑判断和修改操作。</li>
+<li>当只需要简单地遍历集合或数组的每个元素，并对每个元素执行相同的操作时，可以选择使用<code>forEach</code>循环。它提供了一种更简洁、可读性更高的方式。</li>
+</ol>
+<hr>
+<p>参考文章链接：<a href="https://blog.csdn.net/qq_40521656/article/details/90749927">coder小林哥</a></p>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>知识杂谈</title>
+    <url>/breeze/558fa028.html</url>
+    <content><![CDATA[<h3 id><a href="#" class="headerlink" title></a></h3>]]></content>
   </entry>
   <entry>
     <title>java8新特性</title>
